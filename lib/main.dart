@@ -1,5 +1,7 @@
+import 'package:a_e/views/auth/login_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,24 +20,10 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
             brightness: Brightness.dark,
             primaryColor: Colors.lightBlue[800],
-            fontFamily: 'Poppins'
+          fontFamily: GoogleFonts.notoSansArabic().fontFamily,
         ),
-        home:  HomePage(),
+        home: LoginScreen(),
       );
   }
 }
 
-
-class HomePage extends StatelessWidget {
-  HomePage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-
-    return const Scaffold(
-      resizeToAvoidBottomInset: false,
-      appBar: null,
-      backgroundColor: Color(0xffE5E5E5),
-    );
-  }
-}
