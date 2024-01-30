@@ -259,7 +259,7 @@ class _SignupScreenState extends State<SignupScreen> {
                       ),
                     ),
                     SizedBox(
-                      width:8,
+                      width:7,
                     ),
                     const Text(
                       'هل لديك حساب سابق؟',
