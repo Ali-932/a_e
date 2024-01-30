@@ -80,7 +80,136 @@ class _SignupScreenState extends State<SignupScreen> {
                     textDirection: TextDirection.rtl,
                   ),
                 ),
-                // ... (Repeat the above pattern for other TextFields)
+                const SizedBox(
+                  width: 266,
+                  child: Text(
+                    'ادخل رقم الهاتف :',
+                    style: TextStyle(fontSize: 16, color: Colors.black),
+                    textDirection: TextDirection.rtl,
+                    textAlign: TextAlign.right,
+                  ),
+                ),
+                SizedBox(
+                  height: 50,
+                  width: 266,
+                  child: TextField(
+                    controller: _phoneController,
+                    decoration: InputDecoration(
+                      hintText: '0770',
+                      hintStyle:
+                      englishFont(color: Colors.black.withOpacity(0.3)),
+                      prefixIcon: const Icon(
+                        Icons.phone,
+                        color: Colors.black38,
+                      ),
+                      fillColor: const Color(0xFFF1F2FF),
+                      filled: true,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                    ),
+                    obscureText: true,
+                    // This line makes the input text hidden (masked) for passwords
+                    textDirection: TextDirection.ltr,
+                  ),
+                ),
+                SizedBox(
+                  width: 266,
+                  child: Text(
+                    'ادخل ايميلك:',
+                    style: TextStyle(fontSize: 16, color: Colors.black),
+                    textDirection: TextDirection.rtl,
+                    textAlign: TextAlign.right,
+                  ),
+                ),
+                SizedBox(
+                  height: 50,
+                  width: 266,
+                  child: TextField(
+                    controller: _emailController,
+                    decoration: InputDecoration(
+                      hintText: 'Example@gmail.com',
+                      hintStyle:
+                      englishFont(color: Colors.black.withOpacity(0.3)),
+                      prefixIcon: const Icon(
+                        Icons.email,
+                        color: Colors.black38,
+                      ),
+                      fillColor: const Color(0xFFF1F2FF),
+                      filled: true,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                    ),
+                    textDirection: TextDirection.ltr,
+                  ),
+                ),
+                const SizedBox(
+                  width: 266,
+                  child: Text(
+                    'ادخل كلمة المرور:',
+                    style: TextStyle(fontSize: 16, color: Colors.black),
+                    textDirection: TextDirection.rtl,
+                    textAlign: TextAlign.right,
+                  ),
+                ),
+                SizedBox(
+                  height: 50,
+                  width: 266,
+                  child: TextField(
+                    controller: _passwordController,
+                    decoration: InputDecoration(
+                      hintText: 'Password',
+                      hintStyle:
+                      englishFont(color: Colors.black.withOpacity(0.3)),
+                      prefixIcon: const Icon(
+                        Icons.lock,
+                        color: Colors.black38,
+                      ),
+                      fillColor: const Color(0xFFF1F2FF),
+                      filled: true,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                    ),
+                    obscureText: true,
+                    // This line makes the input text hidden (masked) for passwords
+                    textDirection: TextDirection.ltr,
+                  ),
+                ),
+                const SizedBox(
+                  width: 266,
+                  child: Text(
+                    'تاكيد كلمة المرور:',
+                    style: TextStyle(fontSize: 16, color: Colors.black),
+                    textDirection: TextDirection.rtl,
+                    textAlign: TextAlign.right,
+                  ),
+                ),
+                SizedBox(
+                  height: 50,
+                  width: 266,
+                  child: TextField(
+                    controller: _confirmPasswordController,
+                    decoration: InputDecoration(
+                      hintText: 'Confirm Password',
+                      hintStyle:
+                      englishFont(color: Colors.black.withOpacity(0.3)),
+                      prefixIcon: const Icon(
+                        Icons.lock,
+                        color: Colors.black38,
+                      ),
+                      fillColor: const Color(0xFFF1F2FF),
+                      filled: true,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                    ),
+                    obscureText: true,
+                    // This line makes the input text hidden (masked) for passwords
+                    textDirection: TextDirection.ltr,
+                  ),
+                ),
 
                 const SizedBox(
                   height: 30,
@@ -105,7 +234,6 @@ class _SignupScreenState extends State<SignupScreen> {
                 SizedBox(
                   height: 40,
                 ),
-
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -131,10 +259,10 @@ class _SignupScreenState extends State<SignupScreen> {
                       ),
                     ),
                     SizedBox(
-                      width: 8,
+                      width:8,
                     ),
                     const Text(
-                      'هل لديك حساب سابقا؟',
+                      'هل لديك حساب سابق؟',
                       textDirection: TextDirection.rtl,
                       style: TextStyle(
                           color: Colors.black,

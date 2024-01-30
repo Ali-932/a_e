@@ -130,7 +130,7 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 10,
+                    width: 7,
                   ),
                   const Text(
                     'انشاء حساب جديد؟',
