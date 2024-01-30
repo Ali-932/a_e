@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../../utils/fonts.dart';
 import 'login_view.dart';
 
@@ -40,8 +41,8 @@ class _SignupScreenState extends State<SignupScreen> {
                 const SizedBox(
                   height: 90,
                 ),
-                Text(
-                  "sign up",
+                const Text(
+                  "انشاء حساب",
                   style: TextStyle(
                       fontSize: 30,
                       color: Color(0xff4048FD),
@@ -49,7 +50,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   textDirection: TextDirection.rtl,
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 266,
                   child: Text(
                     'ادخل اسمك:',
@@ -63,8 +64,11 @@ class _SignupScreenState extends State<SignupScreen> {
                   width: 266,
                   child: TextField(
                     controller: _nameController,
+                    style: const TextStyle(
+                      color: Colors.black,
+                    ),
                     decoration: InputDecoration(
-                      hintText: 'اسراء',
+                      hintText: 'Esraa',
                       hintStyle:
                       englishFont(color: Colors.black.withOpacity(0.3)),
                       prefixIcon: const Icon(
@@ -94,6 +98,9 @@ class _SignupScreenState extends State<SignupScreen> {
                   width: 266,
                   child: TextField(
                     controller: _phoneController,
+                    style: const TextStyle(
+                      color: Colors.black,
+                    ),
                     decoration: InputDecoration(
                       hintText: '0770',
                       hintStyle:
@@ -113,7 +120,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     textDirection: TextDirection.ltr,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 266,
                   child: Text(
                     'ادخل ايميلك:',
@@ -127,6 +134,9 @@ class _SignupScreenState extends State<SignupScreen> {
                   width: 266,
                   child: TextField(
                     controller: _emailController,
+                    style: const TextStyle(
+                      color: Colors.black,
+                    ),
                     decoration: InputDecoration(
                       hintText: 'Example@gmail.com',
                       hintStyle:
@@ -158,8 +168,11 @@ class _SignupScreenState extends State<SignupScreen> {
                   width: 266,
                   child: TextField(
                     controller: _passwordController,
+                    style: const TextStyle(
+                      color: Colors.black,
+                    ),
                     decoration: InputDecoration(
-                      hintText: 'Password',
+                      hintText: '*********',
                       hintStyle:
                       englishFont(color: Colors.black.withOpacity(0.3)),
                       prefixIcon: const Icon(
@@ -191,8 +204,11 @@ class _SignupScreenState extends State<SignupScreen> {
                   width: 266,
                   child: TextField(
                     controller: _confirmPasswordController,
+                    style: const TextStyle(
+                      color: Colors.black,
+                    ),
                     decoration: InputDecoration(
-                      hintText: 'Confirm Password',
+                      hintText: '*********',
                       hintStyle:
                       englishFont(color: Colors.black.withOpacity(0.3)),
                       prefixIcon: const Icon(
@@ -223,7 +239,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     borderRadius: BorderRadius.all(Radius.circular(10.0)),
                   ),
                   child: const Text(
-                    'sign up',
+                    'انشاء حساب',
                     textDirection: TextDirection.rtl,
                     style: TextStyle(
                         color: Colors.white,
@@ -231,8 +247,8 @@ class _SignupScreenState extends State<SignupScreen> {
                         fontWeight: FontWeight.w700),
                   ),
                 ),
-                SizedBox(
-                  height: 40,
+                const SizedBox(
+                  height: 10,
                 ),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -247,19 +263,17 @@ class _SignupScreenState extends State<SignupScreen> {
                         );
                       },
                       style: TextButton.styleFrom(
-                        primary: Color(0xff4048FD), // Text color
+                        foregroundColor: const Color(0xff4048FD),
                         textStyle: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.normal,
+                          fontFamily: GoogleFonts.notoSansArabic().fontFamily,
                         ),
                       ),
-                      child: Text(
-                        'Login',
+                      child: const Text(
+                        'تسجيل الدخول',
                         textDirection: TextDirection.ltr,
                       ),
-                    ),
-                    SizedBox(
-                      width:7,
                     ),
                     const Text(
                       'هل لديك حساب سابق؟',

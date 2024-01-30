@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../../utils/fonts.dart';
 import 'sign_up_view.dart';
 
@@ -35,9 +36,13 @@ class LoginScreen extends StatelessWidget {
                 width: 266,
                 child: TextField(
                   controller: _emailController, // Connect the controller
+                  style: const TextStyle(
+                    color: Colors.black,
+                  ),
                   decoration: InputDecoration(
                     hintText: 'Example@gmail.com',
-                    hintStyle: englishFont(color: Colors.black.withOpacity(0.3)),
+                    hintStyle:
+                        englishFont(color: Colors.black.withOpacity(0.3)),
                     prefixIcon: const Icon(
                       Icons.email,
                       color: Colors.black38,
@@ -64,10 +69,15 @@ class LoginScreen extends StatelessWidget {
                 height: 50,
                 width: 266,
                 child: TextField(
-                  controller: _passwordController, // Connect the controller
+                  controller: _passwordController,
+                  // Connect the controller
+                  style: const TextStyle(
+                    color: Colors.black,
+                  ),
                   decoration: InputDecoration(
-                    hintText: 'Password',
-                    hintStyle: englishFont(color: Colors.black.withOpacity(0.3)),
+                    hintText: '*********',
+                    hintStyle:
+                        englishFont(color: Colors.black.withOpacity(0.3)),
                     prefixIcon: const Icon(
                       Icons.lock,
                       color: Colors.black38,
@@ -97,12 +107,13 @@ class LoginScreen extends StatelessWidget {
                   'تسجيل دخول',
                   textDirection: TextDirection.rtl,
                   style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w700),
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
               Row(
@@ -118,22 +129,21 @@ class LoginScreen extends StatelessWidget {
                       );
                     },
                     style: TextButton.styleFrom(
-                      primary: Color(0xff4048FD), // Text color
+                      foregroundColor: const Color(0xff4048FD),
                       textStyle: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.normal,
+                        fontFamily: GoogleFonts.notoSansArabic().fontFamily,
                       ),
                     ),
-                    child: Text(
-                      'Sign Up',
+                    child: const Text(
+                      'انشاء حساب',
+                      style: TextStyle(fontSize: 16),
                       textDirection: TextDirection.ltr,
                     ),
                   ),
-                  SizedBox(
-                    width: 8,
-                  ),
                   const Text(
-                    'انشاء حساب جديد؟',
+                    'ليس لديك حساب؟',
                     textDirection: TextDirection.rtl,
                     style: TextStyle(
                         color: Colors.black,
