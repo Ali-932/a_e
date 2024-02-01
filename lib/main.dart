@@ -1,10 +1,11 @@
+import 'package:a_e/utils/NavigationBar.dart';
+import 'package:a_e/views/auth/home_view.dart';
 import 'package:a_e/views/auth/login_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'controllers/init_controllers.dart';
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   init();
@@ -18,15 +19,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-        title: 'MooCat',
+        title: 'MooCatapp',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
             brightness: Brightness.dark,
             primaryColor: Colors.black,
           fontFamily: GoogleFonts.notoSansArabic().fontFamily,
         ),
-        home:LoginScreen(),
+        home:Navbar(),
       );
   }
 }
-
