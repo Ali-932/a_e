@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:get/get.dart';
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -334,6 +334,7 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
 
+
                       ],
 
                     ),
@@ -342,10 +343,77 @@ class HomePage extends StatelessWidget {
                 ],),
               ],
             ),
+            SizedBox(height: 12,),
 
+              Text(
+                'شائع',
+                style: TextStyle(fontSize: 16, color: Color(0xFF5F5B5B), fontWeight: FontWeight.bold),
+
+
+              ),
+            SizedBox(height: 12,),
+            Container(
+              width: 188,
+              height: 227,
+              decoration: BoxDecoration(
+                color:Colors.white,
+                borderRadius: BorderRadius.circular( 7),
+               boxShadow: [
+                BoxShadow(
+                color: Colors.grey,
+                offset: Offset(0.0, 2.0),
+                blurRadius: 4.0,
+              ),],
+                border: Border.all(
+                  color: Colors.white38,  // Border color
+                  width: 2.0,           // Border width
+                ),
+
+
+              ),
+              child:Column(
+
+                children: [
+                  Container(
+                    width: 188,
+                    height: 162.97,
+                    decoration: BoxDecoration(
+                      color:Colors.white,
+                      borderRadius: BorderRadius.only(topLeft:Radius.circular(7),topRight:Radius.circular( 7) ,bottomLeft: Radius.circular(7) ,bottomRight:Radius.circular( 40), ),
+
+                    ),
+
+                    child:Image.asset('assets/images/img_6.png',height:162.97,width:188,),
+                  ),
+                  Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Text(
+                        'متجر قطتي',
+                        style: TextStyle(fontSize: 16, color: Color(0xFF5F5B5B), fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(height: 7,),
+                      Row(
+                        children: [
+                          Icon(Icons.location_on_sharp,size: 35,color: Color(0xff4048FD),)
+                        ],
+                      )
+
+                    ],
+                  )
+
+                ],
+
+              ),
+
+            ),
           ],
         ),
       ),
     );
   }
+}
+NavbarController() async {
+  // TODO: implement NavbarController
+  throw UnimplementedError();
 }

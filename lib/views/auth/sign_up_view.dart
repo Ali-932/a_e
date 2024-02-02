@@ -284,6 +284,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   fontSize: 16,
                   fontWeight: FontWeight.w700),
             ),
+
           ),
           const SizedBox(
             height: 10,

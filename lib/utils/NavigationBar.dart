@@ -1,41 +1,57 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class Navbar extends StatefulWidget {
-  const Navbar({Key? key}) : super(key: key);
+import '../views/auth/home_view.dart';
 
-  @override
-  _NavbarState createState() => _NavbarState();
+class NavbarController extends GetxController {
+  RxInt currentIndex = 0.obs;
+
+  void changeTabIndex(int index) {
+    currentIndex.value = index;
+
+    switch (index) {
+      case 0:
+      // Navigate to Home Page
+        Get.to(() => HomePage());
+        break;
+    // Add cases for other tabs if needed
+      default:
+        break;
+    }
+  }
 }
 
-class _NavbarState extends State<Navbar> {
-  int _currentIndex = 0;
-  final tabs =[
-    Center(child: Text("رئيسيه"),),
-    Center(child: Text("عربة"),),
-    Center(child: Text("اقسام"),),
-    Center(child: Text("شخصي"),),
-    Center(child: Text("موقع"),),
-    
-  ];
+class Navbar extends StatelessWidget {
+  final NavbarController _controller = Get.put(NavbarController());
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: tabs[_currentIndex],
+    final tabs = [
+      Center(
+        child: Text("رئيسيه"),
+      ),
+      Center(
+        child: Text("عربة"),
+      ),
+      Center(
+        child: Text("اقسام"),
+      ),
+      Center(
+        child: Text("شخصي"),
+      ),
+      Center(
+        child: Text("موقع"),
+      ),
+    ];
 
+    return Scaffold(
+      body: Obx(() => tabs[_controller.currentIndex.value]),
 
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex,
-        onTap: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
+        currentIndex: _controller.currentIndex.value,
+        onTap: _controller.changeTabIndex,
         backgroundColor: const Color(0xff4048FD),
         type: BottomNavigationBarType.fixed,
-        //selectedFontSize:25,
-       // unselectedFontSize: 20,
-
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home, color: Colors.white, size: 35),
