@@ -163,13 +163,14 @@ class UpperTag extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       child: Container(
         height: 33.8,
-        width: 63.35,
+        width: 69.35,
+        padding: const EdgeInsets.all(4),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30.12),
           color: const Color(0xff4048FD),
         ),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Text(
               name,
