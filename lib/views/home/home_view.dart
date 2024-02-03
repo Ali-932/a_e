@@ -111,7 +111,7 @@ class HomePage extends StatelessWidget {
                     SizedBox(
                       width:20,
                     ),
-                    const CommonItem(name: "متجر الحيوانات الأليفة", imagePath: "assets/images/img_6.png",),
+                    const CommonItem(name: "متجر الحيوانات الأليف", imagePath: "assets/images/img_6.png",),
                     SizedBox(
                       width:20,
                     ),
