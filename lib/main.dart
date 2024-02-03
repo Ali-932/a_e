@@ -1,6 +1,4 @@
-import 'package:a_e/utils/NavigationBar.dart';
-import 'package:a_e/views/auth/home_view.dart';
-import 'package:a_e/views/auth/login_view.dart';
+import 'package:a_e/utils/navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
