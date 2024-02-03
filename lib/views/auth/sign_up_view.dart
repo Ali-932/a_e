@@ -1,3 +1,4 @@
+import 'package:a_e/views/home/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -268,25 +269,36 @@ class _SignupScreenState extends State<SignupScreen> {
             const SizedBox(
             height: 30,
           ),
-          Container(
-            width: 113,
-            height: 45,
-            alignment: Alignment.center,
-            decoration: const BoxDecoration(
-              color: Color(0xff4048FD),
-              borderRadius: BorderRadius.all(Radius.circular(10.0)),
-            ),
-            child: const Text(
-              'انشاء حساب',
-              textDirection: TextDirection.rtl,
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w700),
-            ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => HomePage(), // Replace YourNextScreen with the actual screen you want to navigate to
+                      ),
+                    );
+                  },
+                  child: Container(
+                    width: 113,
+                    height: 45,
+                    alignment: Alignment.center,
+                    decoration: const BoxDecoration(
+                      color: Color(0xff4048FD),
+                      borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                    ),
+                    child: Text(
+                      'انشاء حساب',
+                      textDirection: TextDirection.rtl,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  ),
+                ),
 
-          ),
-          const SizedBox(
+                const SizedBox(
             height: 10,
           ),
           Row(

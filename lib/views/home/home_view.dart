@@ -46,10 +46,10 @@ class HomePage extends StatelessWidget {
               Container(
                 height: 116.7,
                 width: 305.87,
-                child: Image.asset("assets/images/image1.jpg"),
+                child: Image.asset("assets/images/Interface_image_app.jpg"),
               ),
               const Padding(
-                padding: EdgeInsets.only(top: 10),
+                padding: EdgeInsets.only(top: 10,left: 200),
                 child: Text(
                   'حيوانك الاليف',
                   style: TextStyle(
@@ -62,14 +62,16 @@ class HomePage extends StatelessWidget {
               ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
+
+
                 child: Row(
                   children: const [
-                    UpperTag(name: "قطط", imagePath: "assets/images/img_1.png"),
-                    UpperTag(name: "كلاب", imagePath: "assets/images/img_2.png"),
-                    UpperTag(name: "طيور", imagePath: "assets/images/img_3.png"),
-                    UpperTag(name: "ارانب", imagePath: "assets/images/img_4.png"),
-                    UpperTag(name: "سلحفاة", imagePath: "assets/images/img_5.png"),
-                    UpperTag(name: "قطط", imagePath: "assets/images/img_6.png"),
+                    UpperTag(name: "قطط", imagePath: "assets/images/UpperTag_image_cat.png"),
+                    UpperTag(name: "كلاب", imagePath: "assets/images/UpperTag_image_dog.png"),
+                    UpperTag(name: "طيور", imagePath: "assets/images/UpperTag_image_Hams.png"),
+                    UpperTag(name: "ارانب", imagePath: "assets/images/UpperTag_image_Rabbit.png"),
+                    UpperTag(name: "سلحفاة", imagePath: "assets/images/UpperTag_image_turtle.png"),
+
                   ],
                 ),
               ),
@@ -79,25 +81,47 @@ class HomePage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: const [
-                  Category(name: 'متاجر', imagePath: 'assets/images/img.png',),
-                  Category(name: 'عيادات', imagePath: 'assets/images/img_2.png',),
-                  Category(name: 'خدمات منزلية', imagePath: 'assets/images/img_3.png',),
+                  Category(name: 'متاجر', imagePath: 'assets/images/Category_image_home.png',),
+                  Category(name: 'عيادات', imagePath: 'assets/images/Category_image_clinics.png',),
+                  Category(name: 'خدمات منزلية', imagePath: 'assets/images/Category_image_homeservice.png',),
                 ],
               ),
-              const SizedBox(
-                height: 12,
-              ),
-              const Text(
+
+              Padding(padding:  EdgeInsets.only(top: 10,left: 250),
+              child:Text(
                 'شائع',
+
                 style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 20,
                     color: Color(0xFF5F5B5B),
                     fontWeight: FontWeight.bold),
+              ),),
+
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal, // Set the scroll direction to horizontal
+                child: Row(
+                   
+                  children: [
+                    const CommonItem(name: "متجر قطتي", imagePath: "assets/images/img_6.png",),
+                    SizedBox(
+                      width:20,
+                    ),
+
+                    const CommonItem(name: "متجر بند الصحة", imagePath: "assets/images/img_6.png",),
+                    SizedBox(
+                      width:20,
+                    ),
+                    const CommonItem(name: "متجر الحيوانات الأليفة", imagePath: "assets/images/img_6.png",),
+                    SizedBox(
+                      width:20,
+                    ),
+                  ],
+                ),
               ),
-              const SizedBox(
-                height: 12,
-              ),
-              const CommonItem(name: "متجر قطتي",imagePath: "assets/images/img_6.png",),
+
+
+
+
             ],
           ),
         ),

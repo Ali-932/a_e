@@ -23,7 +23,6 @@ class CommonItem extends StatelessWidget {
     return Container(
       width: width,
       height: containerHeight,
-      margin: const EdgeInsets.only(bottom: 16),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(7),
@@ -47,10 +46,10 @@ class CommonItem extends StatelessWidget {
             decoration: const BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(7),
-                topRight: Radius.circular(7),
-                bottomLeft: Radius.circular(7),
-                bottomRight: Radius.circular(40),
+                topLeft: Radius.circular(10),
+                topRight: Radius.circular(10),
+                bottomLeft: Radius.circular(10),
+                bottomRight: Radius.circular(60),
               ),
             ),
             child: Image.asset(
@@ -61,24 +60,26 @@ class CommonItem extends StatelessWidget {
           ),
           Expanded(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Text(
+                Padding(padding:  EdgeInsets.only(left: 70,top: 10),child: Text(
                   name,
                   style: const TextStyle(
                       fontSize: 16,
                       color: Color(0xFF5F5B5B),
                       fontWeight: FontWeight.bold),
                   overflow: TextOverflow.ellipsis, // Prevent overflow of text
-                ),
+                ),),
+
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
-                    Icon(
+                    Padding(padding: EdgeInsets.only(left:5,bottom:5 ),child: Icon(
                       Icons.location_on_sharp,
-                      size: 35,
+                      size: 25,
                       color: Color(0xff4048FD),
-                    )
+                    ),)
+
                   ],
                 )
               ],
@@ -103,8 +104,8 @@ class Category extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Container(
-      width: 81,
-      height: 102,
+      width: 84,
+      height: 106,
       decoration: BoxDecoration(
         color: const Color(0xff4048FD),
         borderRadius: BorderRadius.circular(7),
@@ -113,7 +114,7 @@ class Category extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            width: 81,
+            width: 84,
             height: 84,
             decoration: const BoxDecoration(
               color: Colors.white,
@@ -137,7 +138,7 @@ class Category extends StatelessWidget {
                   fontSize: 11.29,
                   color: Color(0xFFFFFFFF),
                   fontWeight: FontWeight.normal),
-              textDirection: TextDirection.rtl,
+              textAlign: TextAlign.center,
             ),
           ),
         ],
