@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../views/home/home_view.dart';
+import '../views/home/stores_view.dart';
 
 class NavbarController extends GetxController {
   var currentIndex = 0.obs;
@@ -20,7 +21,7 @@ class Navbar extends StatelessWidget {
     final List<Widget> tabs = [
       const HomePage(),
       const Text("عربة"),
-      const Text("اقسام"),
+      const Storespage(),
       const Text("شخصي"),
       const Text("موقع"),
     ];
