@@ -1,7 +1,9 @@
-import 'package:a_e/views/home/stores_view.dart';
+
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../utils/home/home_view_utils.dart';
+import '../category/shopes.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -12,6 +14,7 @@ class HomePage extends StatelessWidget {
       backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
+
           child: Column(
             children: [
               Container(
@@ -82,18 +85,18 @@ class HomePage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                GestureDetector(
-                  onTap: () {
-                    // Navigate to the CategoryDetailPage when tapped
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Storespage(),
-                      ),
-                    );
-                  },
-                  child: Category(name: 'متاجر', imagePath: 'assets/images/Category_image_home.png'),
-                ),
+
+                  GestureDetector(
+                    onTap: () {
+
+                      Get.to(() => shopspage());
+                    },
+                    child: Category(
+                      name: 'متاجر',
+                      imagePath: 'assets/images/Category_image_clinics.png',
+                    ),
+                  ),
+
 
                   Category(name: 'عيادات', imagePath: 'assets/images/Category_image_clinics.png',),
                   Category(name: 'خدمات منزلية', imagePath: 'assets/images/Category_image_homeservice.png',),

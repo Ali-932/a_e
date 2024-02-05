@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../views/category/category_view.dart';
+
+import '../views/category/shopes.dart';
 import '../views/home/home_view.dart';
-import '../views/home/stores_view.dart';
+
 
 class NavbarController extends GetxController {
   var currentIndex = 0.obs;

@@ -20,7 +20,8 @@ class CommonItem extends StatelessWidget {
     double imageHeight = width * (162.97 / 188); // maintain the aspect ratio
     double containerHeight = imageHeight + 90; // additional height for text and icon
 
-    return Container(
+    return
+      Container(
       width: width,
       height: containerHeight,
       decoration: BoxDecoration(
