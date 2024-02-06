@@ -1,21 +1,21 @@
 import 'package:a_e/views/category/shopes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../controllers/navbar_controllers.dart';
 import '../../utils/category/category_view_utils.dart';
 import '../../utils/home/home_view_utils.dart';
 
-
 class Storespage extends StatelessWidget {
-  const Storespage({Key? key}) : super(key: key);
+  final NavbarController controller =
+      Get.find<NavbarController>(); // Find the controller
+  Storespage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-        appBar:
-        AppBar(
+        appBar: AppBar(
           centerTitle: true,
-          title: Text(
+          title: const Text(
             'الاقسام',
             style: TextStyle(
               fontWeight: FontWeight.bold,
@@ -23,23 +23,19 @@ class Storespage extends StatelessWidget {
               color: Colors.white,
             ),
           ),
-          backgroundColor: Color(0xFF4048FD),
+          backgroundColor: const Color(0xFF4048FD),
           actions: [
             IconButton(
-              icon: Icon(Icons.arrow_forward_ios_outlined),
-
-              onPressed: () {
-
-              },
+              icon: const Icon(Icons.arrow_forward_ios_outlined),
+              onPressed: () {},
             ),
           ],
-
         ),
         backgroundColor: Colors.white,
-        body:Column(
+        body: Column(
           children: [
             const Padding(
-              padding: EdgeInsets.only(top: 25,left: 250),
+              padding: EdgeInsets.only(top: 25, left: 250),
               child: Text(
                 'حيوانك الاليف',
                 style: TextStyle(
@@ -50,60 +46,28 @@ class Storespage extends StatelessWidget {
                 textDirection: TextDirection.rtl,
               ),
             ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: const [
-                  UpperTag(name: "قطط", imagePath: "assets/images/UpperTag_image_cat.png"),
-                  UpperTag(name: "كلاب", imagePath: "assets/images/UpperTag_image_dog.png"),
-                  UpperTag(name: "طيور", imagePath: "assets/images/UpperTag_image_Hams.png"),
-                  UpperTag(name: "ارانب", imagePath: "assets/images/UpperTag_image_Rabbit.png"),
-                  UpperTag(name: "سلحفاة", imagePath: "assets/images/UpperTag_image_turtle.png"),
-
-                ],
-              ),
-            ),
+            const UpperTagRow(),
             Center(
               child: Column(
                 children: [
-                Row(
-
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-
-                        Get.to(() => shopspage());
-                      },
-                      child: BoxItem(name:"متاجر"),
-                    ),
-
-
-                    BoxItem(name:"عيادات"),
-
-
-                  ],
-                ),
-                Row(
-                  children: [
-                    BoxItem(name:"عروض"),
-                    BoxItem(name:"خدمات منزليه"),
-
-                  ],
-                ),
-
-                  Row(
+                  Wrap(
                     children: [
-                      BoxItem(name:"منظمات"),
-
-
+                      GestureDetector(
+                        onTap: () {
+                          controller.goToNestedPage(ShopsPage());
+                        },
+                        child: const BoxItem(name: "متاجر"),
+                      ),
+                      const BoxItem(name: "عيادات"),
+                      const BoxItem(name: "عروض"),
+                      const BoxItem(name: "خدمات منزليه"),
+                      const BoxItem(name: "منظمات"),
                     ],
                   ),
-              ],
-
+                ],
               ),
             ),
           ],
-        )
-    );
+        ));
   }
 }

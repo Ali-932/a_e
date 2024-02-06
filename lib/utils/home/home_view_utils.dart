@@ -192,3 +192,41 @@ class UpperTag extends StatelessWidget {
     );
   }
 }
+
+
+class UpperTagRow extends StatelessWidget {
+  const UpperTagRow({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: const [
+          UpperTag(
+              name: "قطط",
+              imagePath:
+              "assets/images/UpperTag/UpperTag_image_cat.png"),
+          UpperTag(
+              name: "كلاب",
+              imagePath:
+              "assets/images/UpperTag/UpperTag_image_dog.png"),
+          UpperTag(
+              name: "طيور",
+              imagePath:
+              "assets/images/UpperTag/UpperTag_image_Hams.png"),
+          UpperTag(
+              name: "ارانب",
+              imagePath:
+              "assets/images/UpperTag/UpperTag_image_Rabbit.png"),
+          UpperTag(
+              name: "سلحفاة",
+              imagePath:
+              "assets/images/UpperTag/UpperTag_image_turtle.png"),
+        ],
+      ),
+    );
+  }
+}

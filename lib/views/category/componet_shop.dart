@@ -10,7 +10,7 @@ class ItemShop extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(
+        title: const Text(
           'متجر دبدوب',
           style: TextStyle(
             fontWeight: FontWeight.bold,
@@ -18,10 +18,10 @@ class ItemShop extends StatelessWidget {
             color: Colors.white,
           ),
         ),
-        backgroundColor: Color(0xFF4048FD),
+        backgroundColor: const Color(0xFF4048FD),
         actions: [
           IconButton(
-            icon: Icon(Icons.arrow_forward_ios_outlined),
+            icon: const Icon(Icons.arrow_forward_ios_outlined),
             onPressed: () {},
           ),
         ],
@@ -31,35 +31,36 @@ class ItemShop extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.only(top: 20, left: 12),
+              padding: const EdgeInsets.only(top: 20, left: 12),
               child: Container(
                 height: 168,
                 width: 358,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
                 ),
-                child: Image.asset("assets/images/shop/interface_image_shop.png"),
+                child:
+                    Image.asset("assets/images/shop/interface_image_shop.png"),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Padding(
-              padding: EdgeInsets.only(left: 3),
+              padding: const EdgeInsets.only(left: 3),
               child: Container(
                 width: 470,
                 height: 8,
-                color: Color(0xffD9D9D9),
+                color: const Color(0xffD9D9D9),
               ),
             ),
             Row(
               children: [
                 Padding(
-                  padding: EdgeInsets.only(left: 15),
+                  padding: const EdgeInsets.only(left: 15),
                   child: Container(
                     height: 31,
                     width: 97,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       borderRadius: BorderRadius.only(
                         topRight: Radius.circular(3),
                         topLeft: Radius.circular(3),
@@ -67,7 +68,7 @@ class ItemShop extends StatelessWidget {
                       ),
                       color: Color(0xff4048FD),
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         'كلفه التوصيل 1000',
                         style: TextStyle(
@@ -79,7 +80,7 @@ class ItemShop extends StatelessWidget {
                     ),
                   ),
                 ),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.only(left: 130),
                   child: Text(
                     'متجر دبدوب',
@@ -95,11 +96,11 @@ class ItemShop extends StatelessWidget {
             Row(
               children: [
                 Padding(
-                  padding: EdgeInsets.only(left: 15),
+                  padding: const EdgeInsets.only(left: 15),
                   child: Container(
                     height: 31,
                     width: 67,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       borderRadius: BorderRadius.only(
                         topRight: Radius.circular(3),
                         topLeft: Radius.circular(3),
@@ -107,7 +108,7 @@ class ItemShop extends StatelessWidget {
                       ),
                       color: Color(0xff777DFA),
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         '20-30 ',
                         style: TextStyle(
@@ -119,7 +120,7 @@ class ItemShop extends StatelessWidget {
                     ),
                   ),
                 ),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.only(left: 115),
                   child: Text(
                     'بغداد/شارع المعارض',
@@ -130,28 +131,28 @@ class ItemShop extends StatelessWidget {
                     ),
                   ),
                 ),
-                Icon(
+                const Icon(
                   Icons.location_on_rounded,
                   size: 25,
                   color: Colors.black,
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Padding(
-              padding: EdgeInsets.only(left: 3),
+              padding: const EdgeInsets.only(left: 3),
               child: Container(
                 width: 470,
                 height: 8,
-                color: Color(0xffD9D9D9),
+                color: const Color(0xffD9D9D9),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(left: 300),
               child: Text(
                 'شائع',
@@ -165,7 +166,7 @@ class ItemShop extends StatelessWidget {
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
-                children: [
+                children: const [
                   SizedBox(height: 10),
                   CommonItem(
                     nameitem: "مسحوق القطط",
@@ -193,21 +194,21 @@ class ItemShop extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Padding(
-              padding: EdgeInsets.only(left: 3),
+              padding: const EdgeInsets.only(left: 3),
               child: Container(
                 width: 470,
                 height: 8,
-                color: Color(0xffD9D9D9),
+                color: const Color(0xffD9D9D9),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(left: 280),
               child: Text(
                 'اغذيه',
@@ -218,103 +219,93 @@ class ItemShop extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-
-                   CommonItem(
-                    nameitem: "مسحوق القطط",
-                    imagePath: 'assets/images/shop/comman _item_image.png',
-                    priceitem: '20.000',
-                  ),
-                 CommonItem(
-                    nameitem: "مسحوق القطط",
-                    imagePath: 'assets/images/shop/comman _item_image.png',
-                    priceitem: '20.000',
-                  ),
-
-              ],
-            ),
-            SizedBox(
-              height: 30,
-            ),
-
-
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
+              children: const [
                 CommonItem(
-                    nameitem: "مسحوق القطط",
-                    imagePath: 'assets/images/shop/comman _item_image.png',
-                    priceitem: '20.000',
-                  ),
-
+                  nameitem: "مسحوق القطط",
+                  imagePath: 'assets/images/shop/comman _item_image.png',
+                  priceitem: '20.000',
+                ),
                 CommonItem(
-                    nameitem: "مسحوق القطط",
-                    imagePath: 'assets/images/shop/comman _item_image.png',
-                    priceitem: '20.000',
-                  ),
-
+                  nameitem: "مسحوق القطط",
+                  imagePath: 'assets/images/shop/comman _item_image.png',
+                  priceitem: '20.000',
+                ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                 CommonItem(
-                    nameitem: "مسحوق القطط",
-                    imagePath: 'assets/images/shop/comman _item_image.png',
-                    priceitem: '20.000',
-                  ),
-
-               CommonItem(
-                    nameitem: "مسحوق القطط",
-                    imagePath: 'assets/images/shop/comman _item_image.png',
-                    priceitem: '20.000',
-                  ),
-
+              children: const [
+                CommonItem(
+                  nameitem: "مسحوق القطط",
+                  imagePath: 'assets/images/shop/comman _item_image.png',
+                  priceitem: '20.000',
+                ),
+                CommonItem(
+                  nameitem: "مسحوق القطط",
+                  imagePath: 'assets/images/shop/comman _item_image.png',
+                  priceitem: '20.000',
+                ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-               CommonItem(
-                    nameitem: "مسحوق القطط",
-                    imagePath: 'assets/images/shop/comman _item_image.png',
-                    priceitem: '20.000',
-                  ),
-
-               CommonItem(
-                    nameitem: "مسحوق القطط",
-                    imagePath: 'assets/images/shop/comman _item_image.png',
-                    priceitem: '20.000',
-                  ),
-
+              children: const [
+                CommonItem(
+                  nameitem: "مسحوق القطط",
+                  imagePath: 'assets/images/shop/comman _item_image.png',
+                  priceitem: '20.000',
+                ),
+                CommonItem(
+                  nameitem: "مسحوق القطط",
+                  imagePath: 'assets/images/shop/comman _item_image.png',
+                  priceitem: '20.000',
+                ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
+              height: 30,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: const [
+                CommonItem(
+                  nameitem: "مسحوق القطط",
+                  imagePath: 'assets/images/shop/comman _item_image.png',
+                  priceitem: '20.000',
+                ),
+                CommonItem(
+                  nameitem: "مسحوق القطط",
+                  imagePath: 'assets/images/shop/comman _item_image.png',
+                  priceitem: '20.000',
+                ),
+              ],
+            ),
+            const SizedBox(
               height: 30,
             ),
             Padding(
-              padding: EdgeInsets.only(left: 3),
+              padding: const EdgeInsets.only(left: 3),
               child: Container(
                 width: 470,
                 height: 8,
-                color: Color(0xffD9D9D9),
+                color: const Color(0xffD9D9D9),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(left: 260),
               child: Text(
                 'حيوانات',
@@ -325,27 +316,25 @@ class ItemShop extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
+              children: const [
                 CommonItem(
                   nameitem: "قط منقط",
                   imagePath: 'assets/images/shop/animal_image_shop.png',
                   priceitem: '20.000',
                 ),
-
                 CommonItem(
                   nameitem: "قط هندي",
                   imagePath: 'assets/images/shop/animal_image_shop.png',
                   priceitem: '20.000',
                 ),
-
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
           ],

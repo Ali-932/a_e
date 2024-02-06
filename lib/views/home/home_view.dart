@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -14,7 +13,6 @@ class HomePage extends StatelessWidget {
       backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
-
           child: Column(
             children: [
               Container(
@@ -53,7 +51,7 @@ class HomePage extends StatelessWidget {
                 child: Image.asset("assets/images/Interface_image_app.jpg"),
               ),
               const Padding(
-                padding: EdgeInsets.only(top: 10,left: 200),
+                padding: EdgeInsets.only(top: 10, left: 200),
                 child: Text(
                   'حيوانك الاليف',
                   style: TextStyle(
@@ -64,80 +62,73 @@ class HomePage extends StatelessWidget {
                   textDirection: TextDirection.rtl,
                 ),
               ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-
-
-                child: Row(
-                  children: const [
-                    UpperTag(name: "قطط", imagePath: "assets/images/UpperTag_image_cat.png"),
-                    UpperTag(name: "كلاب", imagePath: "assets/images/UpperTag_image_dog.png"),
-                    UpperTag(name: "طيور", imagePath: "assets/images/UpperTag_image_Hams.png"),
-                    UpperTag(name: "ارانب", imagePath: "assets/images/UpperTag_image_Rabbit.png"),
-                    UpperTag(name: "سلحفاة", imagePath: "assets/images/UpperTag_image_turtle.png"),
-
-                  ],
-                ),
-              ),
+              const UpperTagRow(),
               const SizedBox(
                 height: 10,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-
                   GestureDetector(
                     onTap: () {
-
-                      Get.to(() => shopspage());
+                      Get.to(() => ShopsPage());
                     },
-                    child: Category(
+                    child: const Category(
                       name: 'متاجر',
-                      imagePath: 'assets/images/Category_image_clinics.png',
+                      imagePath: 'assets/images/Category/Category_image_clinics.png',
                     ),
                   ),
-
-
-                  Category(name: 'عيادات', imagePath: 'assets/images/Category_image_clinics.png',),
-                  Category(name: 'خدمات منزلية', imagePath: 'assets/images/Category_image_homeservice.png',),
+                  const Category(
+                    name: 'عيادات',
+                    imagePath:
+                        'assets/images/Category/Category_image_clinics.png',
+                  ),
+                  const Category(
+                    name: 'خدمات منزلية',
+                    imagePath:
+                        'assets/images/Category/Category_image_homeservice.png',
+                  ),
                 ],
               ),
-
-              Padding(padding:  EdgeInsets.only(top: 10,left: 250),
-              child:Text(
-                'شائع',
-
-                style: TextStyle(
-                    fontSize: 20,
-                    color: Color(0xFF5F5B5B),
-                    fontWeight: FontWeight.bold),
-              ),),
-
+              const Padding(
+                padding: EdgeInsets.only(top: 10, left: 250),
+                child: Text(
+                  'شائع',
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Color(0xFF5F5B5B),
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
               SingleChildScrollView(
-                scrollDirection: Axis.horizontal, // Set the scroll direction to horizontal
+                scrollDirection: Axis.horizontal,
+                // Set the scroll direction to horizontal
                 child: Row(
-                   
                   children: [
-                    const CommonItem(name: "متجر قطتي", imagePath: "assets/images/img_6.png",),
-                    SizedBox(
-                      width:20,
+                    const CommonItem(
+                      name: "متجر قطتي",
+                      imagePath: "assets/images/img_6.png",
                     ),
-
-                    const CommonItem(name: "متجر بند الصحة", imagePath: "assets/images/img_6.png",),
-                    SizedBox(
-                      width:20,
+                    const SizedBox(
+                      width: 20,
                     ),
-                    const CommonItem(name: "متجر الحيوانات الأليف", imagePath: "assets/images/img_6.png",),
-                    SizedBox(
-                      width:20,
+                    const CommonItem(
+                      name: "متجر بند الصحة",
+                      imagePath: "assets/images/img_6.png",
+                    ),
+                    const SizedBox(
+                      width: 20,
+                    ),
+                    const CommonItem(
+                      name: "متجر الحيوانات الأليف",
+                      imagePath: "assets/images/img_6.png",
+                    ),
+                    const SizedBox(
+                      width: 20,
                     ),
                   ],
                 ),
               ),
-
-
-
-
             ],
           ),
         ),
@@ -146,7 +137,3 @@ class HomePage extends StatelessWidget {
   }
 }
 
-NavbarController() async {
-  // TODO: implement NavbarController
-  throw UnimplementedError();
-}
