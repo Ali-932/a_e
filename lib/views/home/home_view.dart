@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../utils/home/home_view_utils.dart';
-import '../category/shopes.dart';
+import '../category/stores/stores_view.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -13,37 +13,34 @@ class HomePage extends StatelessWidget {
       backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
+
           child: Column(
+
             children: [
-              Container(
-                height: 42.35,
-                width: 305.87,
-                margin: const EdgeInsets.all(16.0),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(7.53),
-                  color: const Color(0xffD4D4D4),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    const Text(
-                      'ابحث هنا',
-                      style: TextStyle(fontSize: 16, color: Colors.black26),
-                      textDirection: TextDirection.rtl,
+              const SizedBox(height: 12),
+              TextField(
+                decoration: InputDecoration(
+                  hintText: 'ابحث هنا',
+                  hintStyle: TextStyle(fontSize: 16, color: Colors.black26),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(7.53),
+                    borderSide: BorderSide.none,
+                  ),
+                  filled: true,
+                  fillColor: Color(0xffD4D4D4),
+                  contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+                  suffixIcon: Container(
+                    height: 42.35,
+                    width: 41.41,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(7.53),
+                      color: Color(0xff4048FD),
                     ),
-                    const SizedBox(width: 5),
-                    Container(
-                      height: 42.35,
-                      width: 41.41,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(7.53),
-                        color: const Color(0xff4048FD),
-                      ),
-                      child: const Icon(Icons.search, color: Colors.white),
-                    ),
-                  ],
+                    child: Icon(Icons.search, color: Colors.white),
+                  ),
                 ),
               ),
+
               const SizedBox(height: 12),
               Container(
                 height: 116.7,
@@ -62,7 +59,7 @@ class HomePage extends StatelessWidget {
                   textDirection: TextDirection.rtl,
                 ),
               ),
-              const UpperTagRow(),
+            const UpperTagRow(),
               const SizedBox(
                 height: 10,
               ),
@@ -71,7 +68,7 @@ class HomePage extends StatelessWidget {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      Get.to(() => ShopsPage());
+                      Get.to(() => StoresPage());
                     },
                     child: const Category(
                       name: 'متاجر',

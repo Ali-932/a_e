@@ -98,7 +98,29 @@ class CommonItem extends StatelessWidget {
       );
   }
 }
+class NameStore extends StatelessWidget {
+  final String name;
 
+
+  const NameStore({
+    Key? key,
+    required this.name,
+
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return
+      Text(
+      'name',
+      style: TextStyle(
+        fontWeight: FontWeight.bold,
+        fontSize: 24,
+        color: Colors.white,
+      ),
+    );
+  }
+}
 
 
 

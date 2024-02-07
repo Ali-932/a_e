@@ -21,8 +21,8 @@ class BoxItem extends StatelessWidget {
             color: const Color(0xffD8DAFF),
             borderRadius: BorderRadius.circular(15),
             border: Border.all(
-              color: Color(0XFFCAC9C9), // Set the border color
-              width: 2.0,         // Set the border width
+              color: Color(0XFFCAC9C9),
+              width: 2.0,
             ),
           ),
           child:

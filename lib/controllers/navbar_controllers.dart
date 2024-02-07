@@ -1,7 +1,7 @@
-import 'package:a_e/views/category/category_view.dart';
+import 'package:a_e/views/category/sections_view.dart';
 import 'package:get/get.dart';
 
-import '../views/category/shopes.dart';
+import '../views/category/stores/stores_view.dart';
 import '../views/home/home_view.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +16,11 @@ class NavbarController extends GetxController {
         currentScreen.value = HomePage();
         break;
       case 2:
-        currentScreen.value = Storespage();
+        currentScreen.value = SectionsPage();
+        break;
+      case 3:
+        currentScreen.value = StoresPage();
+
         break;
     }
   }

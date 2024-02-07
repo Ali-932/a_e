@@ -1,11 +1,11 @@
 
-import 'package:a_e/views/category/componet_shop.dart';
+import 'package:a_e/views/category/stores/componet_store_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../controllers/navbar_controllers.dart';
-import '../../utils/category/shop_view_utils.dart';
-class ShopsPage extends StatelessWidget {
-  ShopsPage({Key? key}) : super(key: key);
+import '../../../controllers/navbar_controllers.dart';
+import '../../../utils/category/stores_view_utils.dart';
+class StoresPage extends StatelessWidget {
+  StoresPage({Key? key}) : super(key: key);
   final NavbarController controller =
   Get.find<NavbarController>(); // Find the controller
 
@@ -37,16 +37,16 @@ class ShopsPage extends StatelessWidget {
             const SizedBox(height: 20),
             GestureDetector(
               onTap: () {
-                controller.goToNestedPage(const ItemShop());
+                controller.goToNestedPage( ComponetStore());
                 },
-              child: const ShopPage(
+              child: const Stores(
                 name: "متجر دبدوب",
                 imagePath: "assets/images/shop/img.png",
                 price: "كلفه التوصيل 1000 د.ع",
                 location: 'بغداد / الصليخ',
               ),
             ),
-            const ShopPage(
+            const Stores(
               name: "متجر دبدوب",
               imagePath: "assets/images/shop/img.png",
               price: "كلفه التوصيل 1000 د.ع",
@@ -54,28 +54,28 @@ class ShopsPage extends StatelessWidget {
             ),
 
             const SizedBox(height: 20),
-            const ShopPage(
+            const Stores(
               name: "متجر السعاده",
               imagePath: "assets/images/shop/img.png",
               price: "كلفه التوصيل 3000 د.ع",
               location: 'بغداد / الاعظميه',
             ),
             const SizedBox(height: 20),
-            const ShopPage(
+            const Stores(
               name: "متجرالغابه",
               imagePath: "assets/images/shop/img.png",
               price: "كلفه التوصيل 1000 د.ع",
               location: 'بغداد /الشعله',
             ),
             const SizedBox(height: 20),
-            const ShopPage(
+            const Stores(
               name: "متجر بيتنا",
               imagePath: "assets/images/shop/img.png",
               price: "كلفه التوصيل 8000 د.ع",
               location: 'بغداد / الكراده',
             ),
             const SizedBox(height: 20),
-            const ShopPage(
+            const Stores(
               name: "متجرقطتي",
               imagePath: "assets/images/shop/img.png",
               price: "كلفه التوصيل 4000 د.ع",

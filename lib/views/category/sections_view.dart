@@ -1,14 +1,14 @@
-import 'package:a_e/views/category/shopes.dart';
+import 'package:a_e/views/category/stores/stores_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../controllers/navbar_controllers.dart';
-import '../../utils/category/category_view_utils.dart';
+import '../../utils/category/sections_view._utils.dart';
 import '../../utils/home/home_view_utils.dart';
 
-class Storespage extends StatelessWidget {
+class SectionsPage extends StatelessWidget {
   final NavbarController controller =
       Get.find<NavbarController>(); // Find the controller
-  Storespage({Key? key}) : super(key: key);
+  SectionsPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +54,7 @@ class Storespage extends StatelessWidget {
                     children: [
                       GestureDetector(
                         onTap: () {
-                          controller.goToNestedPage(ShopsPage());
+                          controller.goToNestedPage(StoresPage());
                         },
                         child: const BoxItem(name: "متاجر"),
                       ),

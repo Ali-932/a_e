@@ -1,12 +1,12 @@
 
 import 'package:flutter/material.dart';
-class  ShopPage extends StatelessWidget {
+class  Stores extends StatelessWidget {
   final String name;
   final String imagePath;
   final String price;
   final String location;
 
-  const ShopPage  ({
+  const Stores  ({
     Key? key,
     required this.name,
     required this.imagePath,

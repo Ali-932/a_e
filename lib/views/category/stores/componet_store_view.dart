@@ -1,28 +1,29 @@
+import 'package:a_e/views/category/stores/stores_view.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import '../../../controllers/navbar_controllers.dart';
 
-import '../../utils/category/componet_shop_utils.dart';
+import '../../../utils/category/componet_store_utils.dart';
 
-class ItemShop extends StatelessWidget {
-  const ItemShop({Key? key}) : super(key: key);
+class  ComponetStore extends StatelessWidget {
+  ComponetStore({Key? key}) : super(key: key);
+  final NavbarController controller =
+  Get.find<NavbarController>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text(
-          'متجر دبدوب',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 24,
-            color: Colors.white,
-          ),
-        ),
+        title: const NameStore( name: "متجر دبدوب",),
         backgroundColor: const Color(0xFF4048FD),
         actions: [
           IconButton(
             icon: const Icon(Icons.arrow_forward_ios_outlined),
-            onPressed: () {},
+            onPressed: () {
+              controller.goToNestedPage( StoresPage());
+            },
           ),
         ],
       ),
@@ -43,7 +44,7 @@ class ItemShop extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 10,
+              height: 30,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 3),
@@ -77,17 +78,6 @@ class ItemShop extends StatelessWidget {
                           color: Colors.white,
                         ),
                       ),
-                    ),
-                  ),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 130),
-                  child: Text(
-                    'متجر دبدوب',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 24,
-                      color: Color(0xFF4048FD),
                     ),
                   ),
                 ),
@@ -324,12 +314,12 @@ class ItemShop extends StatelessWidget {
               children: const [
                 CommonItem(
                   nameitem: "قط منقط",
-                  imagePath: 'assets/images/shop/animal_image_shop.png',
+                  imagePath: 'assets/images/shop/animals_image_item.png',
                   priceitem: '20.000',
                 ),
                 CommonItem(
                   nameitem: "قط هندي",
-                  imagePath: 'assets/images/shop/animal_image_shop.png',
+                  imagePath: 'assets/images/shop/animals_image_item.png',
                   priceitem: '20.000',
                 ),
               ],
