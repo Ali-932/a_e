@@ -83,7 +83,7 @@ class HomePage extends StatelessWidget {
                         'assets/images/Category/Category_image_clinics.png',
                   ),
                   const Category(
-                    name: 'خدمات منزلية',
+                    name: 'خدمات منزليه',
                     imagePath:
                         'assets/images/Category/Category_image_homeservice.png',
                   ),

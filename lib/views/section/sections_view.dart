@@ -60,7 +60,7 @@ class SectionsPage extends StatelessWidget {
                       ),
                       const BoxItem(name: "عيادات"),
                       const BoxItem(name: "عروض"),
-                      const BoxItem(name: "خدمات منزليه"),
+                      const BoxItem(name: "خدمات منزلية"),
                       const BoxItem(name: "منظمات"),
                     ],
                   ),

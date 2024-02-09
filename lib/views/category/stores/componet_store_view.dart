@@ -16,7 +16,7 @@ class  ComponetStore extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const NameStore( name: "متجر دبدوب",),
+        title: const NameStore( name: "متجر الصحه",),
         backgroundColor: const Color(0xFF4048FD),
         actions: [
           IconButton(
