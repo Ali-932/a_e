@@ -17,29 +17,31 @@ class HomePage extends StatelessWidget {
           child: Column(
 
             children: [
-              const SizedBox(height: 12),
-              TextField(
-                decoration: InputDecoration(
-                  hintText: 'ابحث هنا',
-                  hintStyle: TextStyle(fontSize: 16, color: Colors.black26),
-                  border: OutlineInputBorder(
+          Padding(padding: EdgeInsets.only(top: 12),
+            child:TextField(
+              decoration: InputDecoration(
+                hintText: 'ابحث هنا',
+                hintStyle: TextStyle(fontSize: 16, color: Colors.black26),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(7.53),
+                  borderSide: BorderSide.none,
+                ),
+                filled: true,
+                fillColor: Color(0xffD4D4D4),
+                contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+                suffixIcon: Container(
+                  height: 42.35,
+                  width: 41.41,
+                  decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(7.53),
-                    borderSide: BorderSide.none,
+                    color: Color(0xff4048FD),
                   ),
-                  filled: true,
-                  fillColor: Color(0xffD4D4D4),
-                  contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
-                  suffixIcon: Container(
-                    height: 42.35,
-                    width: 41.41,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(7.53),
-                      color: Color(0xff4048FD),
-                    ),
-                    child: Icon(Icons.search, color: Colors.white),
-                  ),
+                  child: Icon(Icons.search, color: Colors.white),
                 ),
               ),
+            ),
+          ),
+
 
               const SizedBox(height: 12),
               Container(

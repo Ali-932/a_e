@@ -1,13 +1,13 @@
-
-import 'package:a_e/views/category/stores/componet_store_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../controllers/navbar_controllers.dart';
 import '../../../utils/category/stores_view_utils.dart';
+import 'componet_store_view.dart';
+
 class StoresPage extends StatelessWidget {
   StoresPage({Key? key}) : super(key: key);
-  final NavbarController controller =
-  Get.find<NavbarController>(); // Find the controller
+
+  final NavbarController controller = Get.find<NavbarController>();
 
   @override
   Widget build(BuildContext context) {
@@ -31,61 +31,62 @@ class StoresPage extends StatelessWidget {
         ],
       ),
       backgroundColor: Colors.white,
-      body:SingleChildScrollView(
-        child: Column(
-          children: [
-            const SizedBox(height: 20),
-            GestureDetector(
-              onTap: () {
-                controller.goToNestedPage( ComponetStore());
+      body: ListView.builder(
+        itemCount: 6, // Update this number as per your actual item count
+        itemBuilder: (BuildContext context, int index) {
+          return Column(
+            children: [
+              SizedBox(height: 20),
+              GestureDetector(
+                onTap: () {
+                  controller.goToNestedPage(ComponetStore());
                 },
-              child: const Stores(
+                child: Stores(
+                  name: "متجر دبدوب",
+                  imagePath: "assets/images/shop/img.png",
+                  price: "كلفه التوصيل 1000 د.ع",
+                  location: 'بغداد / الصليخ',
+                ),
+              ),
+              Stores(
                 name: "متجر دبدوب",
                 imagePath: "assets/images/shop/img.png",
                 price: "كلفه التوصيل 1000 د.ع",
                 location: 'بغداد / الصليخ',
               ),
-            ),
-            const Stores(
-              name: "متجر دبدوب",
-              imagePath: "assets/images/shop/img.png",
-              price: "كلفه التوصيل 1000 د.ع",
-              location: 'بغداد / الصليخ',
-            ),
-
-            const SizedBox(height: 20),
-            const Stores(
-              name: "متجر السعاده",
-              imagePath: "assets/images/shop/img.png",
-              price: "كلفه التوصيل 3000 د.ع",
-              location: 'بغداد / الاعظميه',
-            ),
-            const SizedBox(height: 20),
-            const Stores(
-              name: "متجرالغابه",
-              imagePath: "assets/images/shop/img.png",
-              price: "كلفه التوصيل 1000 د.ع",
-              location: 'بغداد /الشعله',
-            ),
-            const SizedBox(height: 20),
-            const Stores(
-              name: "متجر بيتنا",
-              imagePath: "assets/images/shop/img.png",
-              price: "كلفه التوصيل 8000 د.ع",
-              location: 'بغداد / الكراده',
-            ),
-            const SizedBox(height: 20),
-            const Stores(
-              name: "متجرقطتي",
-              imagePath: "assets/images/shop/img.png",
-              price: "كلفه التوصيل 4000 د.ع",
-              location: 'بغداد / الاعظميه',
-            ),
-            const SizedBox(height: 20),
-          ],
-        ),
-      )
-
+              SizedBox(height: 20),
+              Stores(
+                name: "متجر السعاده",
+                imagePath: "assets/images/shop/img.png",
+                price: "كلفه التوصيل 3000 د.ع",
+                location: 'بغداد / الاعظميه',
+              ),
+              SizedBox(height: 20),
+              Stores(
+                name: "متجرالغابه",
+                imagePath: "assets/images/shop/img.png",
+                price: "كلفه التوصيل 1000 د.ع",
+                location: 'بغداد /الشعله',
+              ),
+              SizedBox(height: 20),
+              Stores(
+                name: "متجر بيتنا",
+                imagePath: "assets/images/shop/img.png",
+                price: "كلفه التوصيل 8000 د.ع",
+                location: 'بغداد / الكراده',
+              ),
+              SizedBox(height: 20),
+              Stores(
+                name: "متجرقطتي",
+                imagePath: "assets/images/shop/img.png",
+                price: "كلفه التوصيل 4000 د.ع",
+                location: 'بغداد / الاعظميه',
+              ),
+              SizedBox(height: 20),
+            ],
+          );
+        },
+      ),
     );
   }
 }

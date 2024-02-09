@@ -1,4 +1,4 @@
-import 'package:a_e/views/category/sections_view.dart';
+import 'package:a_e/views/section/sections_view.dart';
 import 'package:get/get.dart';
 
 import '../views/category/stores/stores_view.dart';
