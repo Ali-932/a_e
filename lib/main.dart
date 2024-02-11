@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'controllers/init_controllers.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

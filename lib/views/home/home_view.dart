@@ -7,10 +7,10 @@ import '../category/stores/stores_view.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
-   final NavbarController controller =
-   Get.find<NavbarController>();
   @override
   Widget build(BuildContext context) {
+    final NavbarController controller =
+    Get.find<NavbarController>();
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(

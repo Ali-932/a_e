@@ -6,8 +6,8 @@ import '../controllers/navbar_controllers.dart';
 class AppBinding implements Bindings{
   @override
   void dependencies(){
-    Get.put<NavbarController>(NavbarController());
-    Get.put<SignUpController>(SignUpController());
+    Get.put<NavbarController>(NavbarController(), permanent: true);
+    Get.put<SignUpController>(SignUpController(), permanent: true);
 
   }
 }
