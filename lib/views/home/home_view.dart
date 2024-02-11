@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../controllers/navbar_controllers.dart';
 import '../../utils/home/home_view_utils.dart';
 import '../category/stores/stores_view.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
-
+  HomePage({Key? key}) : super(key: key);
+   final NavbarController controller =
+   Get.find<NavbarController>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,26 +19,26 @@ class HomePage extends StatelessWidget {
           child: Column(
 
             children: [
-          Padding(padding: EdgeInsets.only(top: 12),
+          Padding(padding: const EdgeInsets.only(top: 12),
             child:TextField(
               decoration: InputDecoration(
                 hintText: 'ابحث هنا',
-                hintStyle: TextStyle(fontSize: 16, color: Colors.black26),
+                hintStyle: const TextStyle(fontSize: 16, color: Colors.black26),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(7.53),
                   borderSide: BorderSide.none,
                 ),
                 filled: true,
-                fillColor: Color(0xffD4D4D4),
-                contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+                fillColor: const Color(0xffD4D4D4),
+                contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
                 suffixIcon: Container(
                   height: 42.35,
                   width: 41.41,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(7.53),
-                    color: Color(0xff4048FD),
+                    color: const Color(0xff4048FD),
                   ),
-                  child: Icon(Icons.search, color: Colors.white),
+                  child: const Icon(Icons.search, color: Colors.white),
                 ),
               ),
             ),
@@ -50,11 +52,11 @@ class HomePage extends StatelessWidget {
                 child: Image.asset("assets/images/Interface_image_app.jpg"),
               ),
               const Padding(
-                padding: EdgeInsets.only(top: 10, left: 200),
+                padding: EdgeInsets.only(top: 20, left: 200,bottom: 7),
                 child: Text(
                   'حيوانك الاليف',
                   style: TextStyle(
-                      fontSize: 16,
+                      fontSize: 20,
                       color: Color(0xff5F5B5B),
                       fontWeight: FontWeight.bold),
                   textAlign: TextAlign.start,
@@ -63,14 +65,14 @@ class HomePage extends StatelessWidget {
               ),
             const UpperTagRow(),
               const SizedBox(
-                height: 10,
+                height:20,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   GestureDetector(
                     onTap: () {
-                      Get.to(() => StoresPage());
+                      controller.goToNestedPage(StoresPage());
                     },
                     child: const Category(
                       name: 'متاجر',
@@ -90,7 +92,7 @@ class HomePage extends StatelessWidget {
                 ],
               ),
               const Padding(
-                padding: EdgeInsets.only(top: 10, left: 250),
+                padding: EdgeInsets.only(top: 20, left: 250,bottom: 15),
                 child: Text(
                   'شائع',
                   style: TextStyle(
@@ -103,26 +105,26 @@ class HomePage extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 // Set the scroll direction to horizontal
                 child: Row(
-                  children: [
-                    const CommonItem(
+                  children: const [
+                    CommonItem(
                       name: "متجر قطتي",
                       imagePath: "assets/images/img_6.png",
                     ),
-                    const SizedBox(
+                    SizedBox(
                       width: 20,
                     ),
-                    const CommonItem(
+                    CommonItem(
                       name: "متجر بند الصحة",
                       imagePath: "assets/images/img_6.png",
                     ),
-                    const SizedBox(
+                    SizedBox(
                       width: 20,
                     ),
-                    const CommonItem(
+                    CommonItem(
                       name: "متجر الحيوانات الأليف",
                       imagePath: "assets/images/img_6.png",
                     ),
-                    const SizedBox(
+                    SizedBox(
                       width: 20,
                     ),
                   ],

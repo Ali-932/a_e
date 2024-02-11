@@ -18,13 +18,13 @@ class  Stores extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return   Padding(
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
       child: Container(
         height: 164,
         width: 378,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(7),
-            color: Color(0xffD8DAFF)),
+            color: const Color(0xffD8DAFF)),
         child: Row(
           children: [
             Image.asset(imagePath),
@@ -32,11 +32,11 @@ class  Stores extends StatelessWidget {
             Column(
               children: [
                 Padding(
-                  padding:EdgeInsets.only(top: 20,left: 20),
+                  padding:const EdgeInsets.only(top: 20,left: 20),
                   child: Text(name,
 
                     style: const TextStyle(
-                        fontSize: 20,
+                        fontSize: 18,
                         color: Color(0xFF4048FD),
                         fontWeight: FontWeight.bold),
                   ),
@@ -45,37 +45,41 @@ class  Stores extends StatelessWidget {
                 Row(
                   children: [
                     Padding(
-                      padding:EdgeInsets.only(left:69, ), child:
+                      padding:const EdgeInsets.only(left:69, ), child:
                     Text( location,
                       style: const TextStyle(
-                          fontSize: 10,
+                          fontSize: 8,
                           color: Color(0xFF4048FD),
                           fontWeight: FontWeight.normal),
                     ) ,
                     )  ,
 
-                    Padding(
-                        padding:EdgeInsets.only(left: 4 ), child:
+                    const Padding(
+                        padding:EdgeInsets.only(left: 3 ), child:
                     Icon(Icons.location_on_rounded,color:Color(0xFF4048FD),size: 16, )
                     )  ,
 
 
                   ],),
-                Padding(padding: EdgeInsets.only(top: 25,left:38 , )
+                Padding(
+                  padding: const EdgeInsets.only(top: 25,left:35 , )
                   ,child: Container(
                     height: 19,
                     width:83,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(7),
-                      color:Color(0xFF4048FD),
+                      color:const Color(0xFF4048FD),
 
                     ),
-                    child:Text( price,
+                    child:
+                    Text(
+                      price,
                       style: const TextStyle(
-                          fontSize: 7,
+                          fontSize: 6,
                           color: Colors.white,
                           fontWeight: FontWeight.normal),
                       textAlign: TextAlign.center,
+
                     ) ,
                   ),)
 

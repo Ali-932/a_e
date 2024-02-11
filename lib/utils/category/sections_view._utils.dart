@@ -13,7 +13,7 @@ class BoxItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: 20,top:20),
+      padding: const EdgeInsets.only(left: 20,top:20),
 
       child: Container(width:154,
           height: 123,
@@ -21,12 +21,12 @@ class BoxItem extends StatelessWidget {
             color: const Color(0xffD8DAFF),
             borderRadius: BorderRadius.circular(15),
             border: Border.all(
-              color: Color(0XFFCAC9C9),
+              color: const Color(0XFFCAC9C9),
               width: 2.0,
             ),
           ),
           child:
-          Padding(padding:  EdgeInsets.only(top: 39,left: 12),
+          Padding(padding:  const EdgeInsets.only(top: 39,left: 12),
             child: Text(name,
 
               style: const TextStyle(

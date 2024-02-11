@@ -32,57 +32,58 @@ class StoresPage extends StatelessWidget {
       ),
       backgroundColor: Colors.white,
       body: ListView.builder(
-        itemCount: 6, // Update this number as per your actual item count
-        itemBuilder: (BuildContext context, int index) {
+        itemCount: 6,
+        itemBuilder: (BuildContext context, int index)
+        {
           return Column(
             children: [
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               GestureDetector(
                 onTap: () {
                   controller.goToNestedPage(ComponetStore());
                 },
-                child: Stores(
+                child: const Stores(
                   name: "متجر دبدوب",
                   imagePath: "assets/images/shop/img.png",
                   price: "كلفه التوصيل 1000 د.ع",
                   location: 'بغداد / الصليخ',
                 ),
               ),
-              Stores(
+              const Stores(
                 name: "متجر دبدوب",
                 imagePath: "assets/images/shop/img.png",
                 price: "كلفه التوصيل 1000 د.ع",
                 location: 'بغداد / الصليخ',
               ),
-              SizedBox(height: 20),
-              Stores(
+              const SizedBox(height: 20),
+              const Stores(
                 name: "متجر السعاده",
                 imagePath: "assets/images/shop/img.png",
                 price: "كلفه التوصيل 3000 د.ع",
                 location: 'بغداد / الاعظميه',
               ),
-              SizedBox(height: 20),
-              Stores(
+              const SizedBox(height: 20),
+              const Stores(
                 name: "متجرالغابه",
                 imagePath: "assets/images/shop/img.png",
                 price: "كلفه التوصيل 1000 د.ع",
                 location: 'بغداد /الشعله',
               ),
-              SizedBox(height: 20),
-              Stores(
+              const SizedBox(height: 20),
+              const Stores(
                 name: "متجر بيتنا",
                 imagePath: "assets/images/shop/img.png",
                 price: "كلفه التوصيل 8000 د.ع",
                 location: 'بغداد / الكراده',
               ),
-              SizedBox(height: 20),
-              Stores(
+              const SizedBox(height: 20),
+              const Stores(
                 name: "متجرقطتي",
                 imagePath: "assets/images/shop/img.png",
                 price: "كلفه التوصيل 4000 د.ع",
                 location: 'بغداد / الاعظميه',
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
             ],
           );
         },

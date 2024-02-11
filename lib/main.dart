@@ -1,3 +1,4 @@
+import 'package:a_e/utils/AppBinding.dart';
 import 'package:a_e/utils/navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -7,7 +8,7 @@ import 'controllers/init_controllers.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  init();
+  AppBinding().dependencies();
   runApp(const MyApp());
 }
 

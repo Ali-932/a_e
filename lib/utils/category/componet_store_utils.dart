@@ -20,7 +20,7 @@ class CommonItem extends StatelessWidget {
         width: 114,
         height: 129,
         decoration: BoxDecoration(
-          color: Color(0xff777DFA),
+          color: const Color(0xff777DFA),
           borderRadius: BorderRadius.circular(7),
           boxShadow: const [
             BoxShadow(
@@ -54,7 +54,7 @@ class CommonItem extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(left:50, top: 2),
+                    padding: const EdgeInsets.only(left:50, top: 2),
                     child: Text(
                       nameitem,
                       style: const TextStyle(
@@ -111,9 +111,9 @@ class NameStore extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return
-      Text(
-      'name',
-      style: TextStyle(
+      Text(name
+      ,
+      style: const TextStyle(
         fontWeight: FontWeight.bold,
         fontSize: 24,
         color: Colors.white,

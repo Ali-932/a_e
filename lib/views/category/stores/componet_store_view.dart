@@ -1,7 +1,7 @@
-import 'package:a_e/views/category/stores/stores_view.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
+
 import '../../../controllers/navbar_controllers.dart';
 
 import '../../../utils/category/componet_store_utils.dart';
@@ -22,7 +22,7 @@ class  ComponetStore extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.arrow_forward_ios_outlined),
             onPressed: () {
-              controller.goToNestedPage( StoresPage());
+
             },
           ),
         ],
@@ -44,20 +44,19 @@ class  ComponetStore extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 30,
+              height: 12,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 3),
+              padding: const EdgeInsets.only(top:10,left: 3,bottom:10),
               child: Container(
                 width: 470,
                 height: 8,
                 color: const Color(0xffD9D9D9),
               ),
             ),
-            Row(
-              children: [
+
                 Padding(
-                  padding: const EdgeInsets.only(left: 15),
+                  padding: const EdgeInsets.only(top: 12,bottom:12,right:200),
                   child: Container(
                     height: 31,
                     width: 97,
@@ -81,12 +80,11 @@ class  ComponetStore extends StatelessWidget {
                     ),
                   ),
                 ),
-              ],
-            ),
+
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 15),
+                  padding: const EdgeInsets.only(top:12,left: 24),
                   child: Container(
                     height: 31,
                     width: 67,
@@ -129,7 +127,7 @@ class  ComponetStore extends StatelessWidget {
               ],
             ),
             const SizedBox(
-              height: 30,
+              height: 20,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 3),
@@ -143,7 +141,7 @@ class  ComponetStore extends StatelessWidget {
               height: 10,
             ),
             const Padding(
-              padding: EdgeInsets.only(left: 300),
+              padding: EdgeInsets.only(left: 300,bottom:12 ),
               child: Text(
                 'شائع',
                 style: TextStyle(
@@ -196,7 +194,7 @@ class  ComponetStore extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 30,
+              height: 20,
             ),
             const Padding(
               padding: EdgeInsets.only(left: 280),
@@ -293,10 +291,10 @@ class  ComponetStore extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 30,
+              height: 20,
             ),
             const Padding(
-              padding: EdgeInsets.only(left: 260),
+              padding: EdgeInsets.only(left: 280),
               child: Text(
                 'حيوانات',
                 style: TextStyle(
