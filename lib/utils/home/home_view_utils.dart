@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'package:get/get.dart';
+import '../../../controllers/navbar_controllers.dart';
+import '../../views/uppertage/catpage_view.dart';
 class CommonItem extends StatelessWidget {
   final String name;
   final String imagePath;
@@ -63,7 +65,7 @@ class CommonItem extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Padding(padding:  EdgeInsets.only(left: 70,top: 10),child: Text(
+                Padding(padding:  const EdgeInsets.only(left: 70,top: 10),child: Text(
                   name,
                   style: const TextStyle(
                       fontSize: 16,
@@ -195,7 +197,9 @@ class UpperTag extends StatelessWidget {
 
 
 class UpperTagRow extends StatelessWidget {
-  const UpperTagRow({
+  final NavbarController controller =
+  Get.find<NavbarController>();
+  UpperTagRow({
     Key? key,
   }) : super(key: key);
 
@@ -204,11 +208,20 @@ class UpperTagRow extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
-        children: const [
-          UpperTag(
-              name: "قطط",
-              imagePath:
-              "assets/images/UpperTag/UpperTag_image_cat.png"),
+        children: [
+
+
+
+          GestureDetector(
+            onTap: () {
+              controller.goToNestedPage(CatPage());
+            },
+            child:   UpperTag(
+                name: "قطط",
+                imagePath:
+                "assets/images/UpperTag/UpperTag_image_cat.png"),
+          ),
+
           UpperTag(
               name: "كلاب",
               imagePath:

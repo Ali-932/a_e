@@ -69,11 +69,11 @@ flutter:
   assets:
     - assets/images/
     - assets/images/Category/
-    - assets/images/shop/img.png
-    - assets/images/shop/interface_image_shop.png
-    - assets/images/shop/comman _item_image.png
-    - assets/images/shop/animals_image_item.png
+    - assets/images/shop/
     - assets/images/UpperTag/
+    - assets/images/Catpage/clinic_image_cat.png
+    - assets/images/Catpage/
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
