@@ -36,7 +36,7 @@ class PersonalPage extends StatelessWidget {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 20, left: 70),
+            padding: const EdgeInsets.only(top: 20, left: 70, right: 20),
             child: Container(
               height: 200,
               width: 324,

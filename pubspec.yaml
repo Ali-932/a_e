@@ -74,6 +74,7 @@ flutter:
     - assets/images/shop/comman _item_image.png
     - assets/images/shop/animals_image_item.png
     - assets/images/UpperTag/
+    - assets/images/account/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

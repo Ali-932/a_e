@@ -31,7 +31,7 @@ class HelpPage extends StatelessWidget {
       ),
       body:Column(
         children: [
-          Row(children: [
+          Column(children: [
             const Padding(padding: EdgeInsets.only(top:50,left: 100),
               child: Text(
                 'بماذا تحتاج المساعدة ؟',
@@ -43,7 +43,7 @@ class HelpPage extends StatelessWidget {
                 textDirection: TextDirection.rtl,
               ),
             ),
-
+            Image.asset('assets/images/account/interface_help_account.png')
           ],
           ),
 
@@ -57,7 +57,7 @@ class HelpPage extends StatelessWidget {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
+            children: const [
               Padding(
                 padding: EdgeInsets.only(top:10,),child: Icon(
                 Icons.arrow_forward_ios_outlined,
@@ -91,7 +91,7 @@ class HelpPage extends StatelessWidget {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
+            children: const [
               Padding(
                 padding: EdgeInsets.only(top:10,),child: Icon(
                 Icons.arrow_forward_ios_outlined,
