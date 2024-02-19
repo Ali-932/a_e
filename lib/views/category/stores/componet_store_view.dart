@@ -32,7 +32,7 @@ class  ComponetStore extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 20, left: 12),
+              padding: const EdgeInsets.only(top: 55, left: 12),
               child: Container(
                 height: 168,
                 width: 358,
@@ -56,7 +56,8 @@ class  ComponetStore extends StatelessWidget {
             ),
 
                 Padding(
-                  padding: const EdgeInsets.only(top: 12,bottom:12,right:200),
+                  padding: const EdgeInsets.only(top: 12,bottom:12,right:225
+                  ),
                   child: Container(
                     height: 31,
                     width: 97,
@@ -299,7 +300,7 @@ class  ComponetStore extends StatelessWidget {
                 'حيوانات',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 30,
+                  fontSize: 20,
                   color: Color(0xff4048FD),
                 ),
               ),
