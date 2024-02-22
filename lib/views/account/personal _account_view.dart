@@ -23,22 +23,17 @@ class PersonalPage extends StatelessWidget {
           name: "الحساب",
         ),
         backgroundColor: const Color(0xFF4048FD),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.arrow_forward_ios_outlined),
-            onPressed: () {
-              controller.goToNestedPage(HomePage());
-
-            },
-          ),
-        ],
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios),
+          onPressed: () { controller.goToNestedPage( HomePage());},
+        ),
       ),
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 20, left: 70),
+            padding: const EdgeInsets.only(top: 20,left: 30),
             child: Container(
-              height: 200,
+              height: 350,
               width: 324,
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(
@@ -52,11 +47,11 @@ class PersonalPage extends StatelessWidget {
               child: Column(
                 children: [
                   const Padding(
-                    padding: EdgeInsets.only(top: 10, left: 140),
+                    padding: EdgeInsets.only(top: 20, left:160),
                     child: Text(
                       'تفاصيل الحساب',
                       style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 20,
                           color: Color(0xff5F5B5B),
                           fontWeight: FontWeight.bold),
                       textAlign: TextAlign.start,
@@ -70,11 +65,11 @@ class PersonalPage extends StatelessWidget {
                     child: Row(
                       children: const [
                         Padding(
-                          padding: EdgeInsets.only(top: 10, left: 200),
+                          padding: EdgeInsets.only(top: 30, left: 205),
                           child: Text(
                             'العناوين',
                             style: TextStyle(
-                                fontSize: 16,
+                                fontSize: 20,
                                 color: Color(0xff5F5B5B),
                                 fontWeight: FontWeight.bold),
                             textAlign: TextAlign.start,
@@ -83,7 +78,7 @@ class PersonalPage extends StatelessWidget {
                         ),
                         Padding(
                           padding: EdgeInsets.only(
-                            top: 10,
+                            top: 30,
                           ),
                           child: Icon(
                             Icons.location_on_sharp,
@@ -101,11 +96,11 @@ class PersonalPage extends StatelessWidget {
                     child: Row(
                       children: const [
                         Padding(
-                          padding: EdgeInsets.only(top: 10, left: 200),
+                          padding: EdgeInsets.only(top: 30, left:  200),
                           child: Text(
                             'المساعده',
                             style: TextStyle(
-                                fontSize: 16,
+                                fontSize: 20,
                                 color: Color(0xff5F5B5B),
                                 fontWeight: FontWeight.bold),
                             textAlign: TextAlign.start,
@@ -114,7 +109,7 @@ class PersonalPage extends StatelessWidget {
                         ),
                         Padding(
                           padding: EdgeInsets.only(
-                            top: 10,
+                            top: 30,
                           ),
                           child: Icon(
                             Icons.headset_rounded,
@@ -125,26 +120,6 @@ class PersonalPage extends StatelessWidget {
                       ],
                     ),
                   ),
-                ],
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 40, left: 50),
-            child: Container(
-              height: 180,
-              width: 300,
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20),
-                  topRight: Radius.circular(20),
-                  bottomLeft: Radius.circular(20),
-                  bottomRight: Radius.circular(20),
-                ),
-                color: Color(0xffE9EAFC),
-              ),
-              child: Column(
-                children: [
                   GestureDetector(
                     onTap: () {
                       controller.goToNestedPage(const NotificationsPage());
@@ -152,11 +127,11 @@ class PersonalPage extends StatelessWidget {
                     child: Row(
                       children: const [
                         Padding(
-                          padding: EdgeInsets.only(top: 15, left: 190),
+                          padding: EdgeInsets.only(top: 30, left: 200),
                           child: Text(
                             'الاشعارات',
                             style: TextStyle(
-                                fontSize: 16,
+                                fontSize: 20,
                                 color: Color(0xff5F5B5B),
                                 fontWeight: FontWeight.bold),
                             textAlign: TextAlign.start,
@@ -165,7 +140,7 @@ class PersonalPage extends StatelessWidget {
                         ),
                         Padding(
                           padding: EdgeInsets.only(
-                            top: 10,
+                            top: 30,
                           ),
                           child: Icon(
                             Icons.nature_rounded,
@@ -176,36 +151,14 @@ class PersonalPage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Row(
-                    children: const [
-                      Padding(
-                        padding: EdgeInsets.only(top: 10, left: 158),
-                        child: Text(
-                          'الملف الشخصي',
-                          style: TextStyle(
-                              fontSize: 16,
-                              color: Color(0xff5F5B5B),
-                              fontWeight: FontWeight.bold),
-                          textAlign: TextAlign.start,
-                          textDirection: TextDirection.rtl,
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(
-                          top: 10,
-                        ),
-                        child: Icon(
-                          Icons.person,
-                          size: 25,
-                          color: Color(0xff4048FD),
-                        ),
-                      ),
-                    ],
-                  ),
                 ],
+
               ),
+
             ),
-          )
+
+          ),
+
         ],
       ),
     );
