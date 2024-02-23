@@ -46,7 +46,7 @@ class SectionsPage extends StatelessWidget {
                 textDirection: TextDirection.rtl,
               ),
             ),
-            const UpperTagRow(),
+            UpperTagRow(),
             Center(
               child: Column(
                 children: [

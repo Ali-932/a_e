@@ -53,7 +53,8 @@ class HomePage extends StatelessWidget {
               ),
               const Padding(
                 padding: EdgeInsets.only(top: 20, left: 200,bottom: 7),
-                child: Text(
+                child:
+                Text(
                   'حيوانك الاليف',
                   style: TextStyle(
                       fontSize: 20,
@@ -63,7 +64,7 @@ class HomePage extends StatelessWidget {
                   textDirection: TextDirection.rtl,
                 ),
               ),
-            const UpperTagRow(),
+            UpperTagRow(),
               const SizedBox(
                 height:20,
               ),

@@ -20,18 +20,17 @@ class LocationPage extends StatelessWidget {
           name: "العناوين",
         ),
         backgroundColor: const Color(0xFF4048FD),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.arrow_forward_ios_outlined),
-            onPressed: () {  controller.goToNestedPage( const PersonalPage());},
-          ),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios_new),
+          onPressed: () { controller.goToNestedPage( PersonalPage());},
+        ),
 
-        ],
+
       ),
       body:Column(
         children: [
         Padding(
-          padding: const EdgeInsets.only(top:20,left: 130 ),
+          padding: const EdgeInsets.only(top:20,left :45 ),
           child:
           Container(
             height: 200,
@@ -50,7 +49,7 @@ class LocationPage extends StatelessWidget {
 
                 Row(
                   children: [
-                    const Padding(padding: EdgeInsets.only(top:10,left:100),
+                    const Padding(padding: EdgeInsets.only(top:10,left:190),
                       child: Text(
                         'بغداد _الاعظميه',
                         style: TextStyle(
