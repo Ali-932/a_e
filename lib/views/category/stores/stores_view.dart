@@ -1,6 +1,8 @@
+import 'package:a_e/views/home/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../controllers/navbar_controllers.dart';
+import '../../../utils/category/componet_store_utils.dart';
 import '../../../utils/category/stores_view_utils.dart';
 import 'componet_store_view.dart';
 
@@ -12,23 +14,19 @@ class StoresPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar:
+      AppBar(
         centerTitle: true,
-        title: const Text(
-          'متاجر',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 24,
-            color: Colors.white,
-          ),
+        title: const NameStore(
+          name: "متاجر",
         ),
         backgroundColor: const Color(0xFF4048FD),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.arrow_forward_ios_outlined),
-            onPressed: () {},
-          ),
-        ],
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios),
+          onPressed: () {
+            controller.goToNestedPage( HomePage());
+          },
+        ),
       ),
       backgroundColor: Colors.white,
       body: ListView.builder(
@@ -37,7 +35,7 @@ class StoresPage extends StatelessWidget {
         {
           return Column(
             children: [
-              const SizedBox(height: 20),
+              const SizedBox(height: 25),
               GestureDetector(
                 onTap: () {
                   controller.goToNestedPage(ComponetStore());
@@ -55,35 +53,31 @@ class StoresPage extends StatelessWidget {
                 price: "كلفه التوصيل 1000 د.ع",
                 location: 'بغداد / الصليخ',
               ),
-              const SizedBox(height: 20),
-              const Stores(
-                name: "متجر السعاده",
-                imagePath: "assets/images/shop/interface_stores_image.png",
-                price: "كلفه التوصيل 3000 د.ع",
-                location: 'بغداد / الاعظميه',
-              ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
+
+              const SizedBox(height: 10),
               const Stores(
                 name: "متجرالغابه",
                 imagePath: "assets/images/shop/interface_stores_image.png",
                 price: "كلفه التوصيل 1000 د.ع",
                 location: 'بغداد /الشعله',
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
               const Stores(
                 name: "متجر بيتنا",
                 imagePath: "assets/images/shop/interface_stores_image.png",
                 price: "كلفه التوصيل 8000 د.ع",
                 location: 'بغداد / الكراده',
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
               const Stores(
-                name: "متجرقطتي",
+                name: "متجر بيتنا",
                 imagePath: "assets/images/shop/interface_stores_image.png",
-                price: "كلفه التوصيل 4000 د.ع",
-                location: 'بغداد / الاعظميه',
+                price: "كلفه التوصيل 8000 د.ع",
+                location: 'بغداد / الكراده',
               ),
-              const SizedBox(height: 20),
+
+
             ],
           );
         },

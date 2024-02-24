@@ -1,4 +1,6 @@
 
+import 'package:a_e/views/Modifications/item_view_modification.dart';
+import 'package:a_e/views/category/stores/stores_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -14,18 +16,19 @@ class  ComponetStore extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar:
+      AppBar(
         centerTitle: true,
-        title: const NameStore( name: "متجر الصحه",),
+        title: const NameStore(
+          name: "متجر الصحه",
+        ),
         backgroundColor: const Color(0xFF4048FD),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.arrow_forward_ios_outlined),
-            onPressed: () {
-
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios),
+          onPressed: () {
+            controller.goToNestedPage( StoresPage());
             },
-          ),
-        ],
+        ),
       ),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -155,13 +158,20 @@ class  ComponetStore extends StatelessWidget {
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
-                children: const [
+                children: [
+
                   SizedBox(height: 10),
-                  CommonItem(
-                    nameitem: "مسحوق القطط",
-                    imagePath: 'assets/images/shop/comman _item_image.png',
-                    priceitem: '20.000',
-                  ),
+              GestureDetector(
+                onTap: () {
+                  controller.goToNestedPage(ItemView());
+                },
+                child:   CommonItem(
+                  nameitem: "مسحوق القطط",
+                  imagePath: 'assets/images/shop/comman _item_image.png',
+                  priceitem: '20.000',
+                ),),
+
+
                   SizedBox(width: 30),
                   CommonItem(
                     nameitem: "مسحوق القطط",

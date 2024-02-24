@@ -1,3 +1,4 @@
+import 'package:a_e/views/home/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -21,12 +22,10 @@ class CatPage extends StatelessWidget {
           name: "القطط",
         ),
         backgroundColor: const Color(0xFF4048FD),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.arrow_forward_ios_outlined),
-            onPressed: () {},
-          ),
-        ],
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios),
+          onPressed: () { controller.goToNestedPage( HomePage());},
+        ),
       ),
       body: SingleChildScrollView(
         child: Column(

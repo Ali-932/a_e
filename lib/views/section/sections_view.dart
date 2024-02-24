@@ -1,4 +1,6 @@
+import 'package:a_e/utils/category/componet_store_utils.dart';
 import 'package:a_e/views/category/stores/stores_view.dart';
+import 'package:a_e/views/home/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../controllers/navbar_controllers.dart';
@@ -15,21 +17,14 @@ class SectionsPage extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: const Text(
-            'الاقسام',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 24,
-              color: Colors.white,
-            ),
+          title: const NameStore(
+            name: "الاقسام",
           ),
           backgroundColor: const Color(0xFF4048FD),
-          actions: [
-            IconButton(
-              icon: const Icon(Icons.arrow_forward_ios_outlined),
-              onPressed: () {},
-            ),
-          ],
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back_ios),
+            onPressed: () { controller.goToNestedPage( HomePage());},
+          ),
         ),
         backgroundColor: Colors.white,
         body: Column(

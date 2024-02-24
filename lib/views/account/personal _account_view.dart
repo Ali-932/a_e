@@ -1,3 +1,4 @@
+import 'package:a_e/views/account/update_account_view.dart';
 import 'package:flutter/material.dart';
 
 import '../../utils/category/componet_store_utils.dart';
@@ -6,7 +7,7 @@ import 'package:get/get.dart';
 import '../../../controllers/navbar_controllers.dart';
 import '../home/home_view.dart';
 import 'Notifications_account_view.dart';
-import 'help_account_view.dart';
+import 'help/help_account_view.dart';
 import 'locations_account_view.dart';
 
 class PersonalPage extends StatelessWidget {
@@ -33,7 +34,7 @@ class PersonalPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top: 20,left: 30),
             child: Container(
-              height: 350,
+              height: 400,
               width: 324,
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(
@@ -144,6 +145,37 @@ class PersonalPage extends StatelessWidget {
                           ),
                           child: Icon(
                             Icons.nature_rounded,
+                            size: 25,
+                            color: Color(0xff4048FD),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      controller.goToNestedPage(const UpdataAccount());
+                    },
+                    child: Row(
+                      children: const [
+                        Padding(
+                          padding: EdgeInsets.only(top: 30, left: 150),
+                          child: Text(
+                            'الملف الشخصي',
+                            style: TextStyle(
+                                fontSize: 20,
+                                color: Color(0xff5F5B5B),
+                                fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.start,
+                            textDirection: TextDirection.rtl,
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(
+                            top: 30,
+                          ),
+                          child: Icon(
+                            Icons.person,
                             size: 25,
                             color: Color(0xff4048FD),
                           ),
