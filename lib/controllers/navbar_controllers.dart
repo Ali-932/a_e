@@ -1,3 +1,4 @@
+import 'package:a_e/views/cart/cart_page_view.dart';
 import 'package:a_e/views/section/sections_view.dart';
 
 import 'package:get/get.dart';
@@ -15,6 +16,10 @@ class NavbarController extends GetxController {
     switch (index) {
       case 0:
         currentScreen.value =  HomePage();
+
+        break;
+      case 1:
+        currentScreen.value =  CartPage();
         break;
       case 2:
         currentScreen.value = SectionsPage();

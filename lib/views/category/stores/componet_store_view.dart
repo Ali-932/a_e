@@ -1,5 +1,5 @@
 
-import 'package:a_e/views/Modifications/item_view_modification.dart';
+import 'package:a_e/views/category/stores/item_view_modification.dart';
 import 'package:a_e/views/category/stores/stores_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

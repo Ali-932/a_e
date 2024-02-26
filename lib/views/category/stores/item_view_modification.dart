@@ -2,8 +2,8 @@ import 'package:a_e/views/category/stores/componet_store_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../controllers/navbar_controllers.dart';
-import '../../utils/category/componet_store_utils.dart';
+import '../../../../controllers/navbar_controllers.dart';
+import '../../../utils/category/componet_store_utils.dart';
 
 class ItemView extends StatelessWidget {
   ItemView({Key? key}) : super(key: key);
