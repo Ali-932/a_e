@@ -1,5 +1,10 @@
+import 'package:a_e/utils/navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../../controllers/auth/user_controller.dart';
+import '../../services/sign_in_service.dart';
 import '../../utils/fonts.dart';
 import 'sign_up_view.dart';
 
@@ -9,9 +14,10 @@ class LoginScreen extends StatelessWidget {
   // TextEditingController instances for email and password
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
+    final SignInController signInController = Get.find<SignInController>();
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: ListView(
@@ -103,13 +109,24 @@ class LoginScreen extends StatelessWidget {
                   color: Color(0xff4048FD),
                   borderRadius: BorderRadius.all(Radius.circular(10.0)),
                 ),
-                child: const Text(
-                  'تسجيل دخول',
-                  textDirection: TextDirection.rtl,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w700,
+                child: TextButton(
+                  onPressed: () async {
+                    await signInController.signInUser({
+                      'email': _emailController.text,
+                      'password': _passwordController.text,
+                    });
+                    if (SignInRemote.sc==200) {
+                      Get.to(() => Navbar());
+                    }
+                  },
+                  child: const Text(
+                    'تسجيل دخول',
+                    textDirection: TextDirection.rtl,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w700,
+                    ),
                   ),
                 ),
               ),

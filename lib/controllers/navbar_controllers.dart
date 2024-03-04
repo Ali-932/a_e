@@ -1,9 +1,10 @@
 import 'package:a_e/views/section/sections_view.dart';
 import 'package:get/get.dart';
 import '../views/account/personal _account_view.dart';
-import '../views/cart/car_shop_view.dart';
 import '../views/home/home_view.dart';
 import 'package:flutter/material.dart';
+
+import '../views/shoprush/car_shop_view.dart';
 
 class NavbarController extends GetxController {
   var currentIndex = 0.obs;
@@ -22,7 +23,6 @@ class NavbarController extends GetxController {
         currentScreen.value = const PersonalPage();
         break;
       case 4:
-        currentScreen.value = const CartPage();
         break;
 
     }
