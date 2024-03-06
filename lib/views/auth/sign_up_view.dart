@@ -6,7 +6,10 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../controllers/auth/sign_up_location_controller.dart';
 import '../../data/cities.dart';
 import '../../utils/fonts.dart';
+import '../../utils/navigation_bar.dart';
 import 'login_view.dart';
+import '../../services/sign_up_service.dart';
+
 
 class SignupScreen extends StatefulWidget {
   SignupScreen({Key? key}) : super(key: key);
@@ -17,6 +20,13 @@ class SignupScreen extends StatefulWidget {
 
 class _SignupScreenState extends State<SignupScreen> {
   final SignUpController signupController = Get.find<SignUpController>();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _password1Controller = TextEditingController();
+  final TextEditingController _password2Controller = TextEditingController();
+  final TextEditingController _fullnameController = TextEditingController();
+  final TextEditingController _genderController = TextEditingController();
+  final TextEditingController _phone_numberController = TextEditingController();
+  final TextEditingController _cityController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -270,13 +280,23 @@ class _SignupScreenState extends State<SignupScreen> {
             height: 30,
           ),
                 GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => HomePage(), // Replace YourNextScreen with the actual screen you want to navigate to
-                      ),
-                    );
+                  onTap: ()
+  async {
+                      await  SignUpRemote.signUp({
+                       'fullname':_fullnameController.text,
+                        'email': _emailController.text,
+                        'password1': _password1Controller.text,
+                        'password2': _password2Controller.text,
+                        'gender': _genderController.text,
+                        'city': _cityController.text,
+                        'phone_number': _phone_numberController.text,
+
+
+                      });
+                      if (SignUpRemote.sc==202) {
+                        Get.to(() => Navbar());
+                      }
+
                   },
                   child: Container(
                     width: 113,
@@ -307,7 +327,7 @@ class _SignupScreenState extends State<SignupScreen> {
             children: [
               TextButton(
                 onPressed: () {
-                  // Navigate to the second screen when the button is pressed
+
                   Navigator.push(
                     context,
                     MaterialPageRoute(

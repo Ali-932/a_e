@@ -4,7 +4,9 @@ class Server {
   static Dio dio = Dio();
   // static String baseUrl = 'https://amt7ani.herokuapp.com';
   static String baseUrl = 'https://a-e-backend.onrender.com';
+
   static String signIn = '/api/auth/signin';
+  static String signUP = '/api/auth/signup';
   static late Options token;
   static late String to;
   static void setToken(String t){
@@ -18,6 +20,7 @@ class Server {
      to=t;
 
   }
+
   // static token = Options(
   //   responseType: ResponseType.json,
   //   headers: {
