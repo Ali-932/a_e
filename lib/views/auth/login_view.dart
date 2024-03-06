@@ -1,7 +1,6 @@
 import 'package:a_e/utils/navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../controllers/auth/user_controller.dart';
 import '../../services/sign_in_service.dart';
@@ -142,7 +141,7 @@ class LoginScreen extends StatelessWidget {
                       // Navigate to the second screen when the button is pressed
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => SignupScreen()),
+                        MaterialPageRoute(builder: (context) => const SignupScreen()),
                       );
                     },
                     style: TextButton.styleFrom(

@@ -22,7 +22,7 @@ class SignUpRemote {
       if (response.statusCode == 202) {
         sc.value = 202;
         var jsonString = response.body;
-        return null;
+        return;
       } else if (response.statusCode == 404) {
         sc.value = 404;
         ed.value = 'User is not registered';

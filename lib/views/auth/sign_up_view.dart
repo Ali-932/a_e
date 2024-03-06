@@ -1,7 +1,6 @@
 import 'package:a_e/views/home/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../controllers/auth/sign_up_location_controller.dart';
 import '../../data/cities.dart';
@@ -12,7 +11,7 @@ import '../../services/sign_up_service.dart';
 
 
 class SignupScreen extends StatefulWidget {
-  SignupScreen({Key? key}) : super(key: key);
+  const SignupScreen({Key? key}) : super(key: key);
 
   @override
   _SignupScreenState createState() => _SignupScreenState();
@@ -306,7 +305,7 @@ class _SignupScreenState extends State<SignupScreen> {
                       color: Color(0xff4048FD),
                       borderRadius: BorderRadius.all(Radius.circular(10.0)),
                     ),
-                    child: Text(
+                    child: const Text(
                       'انشاء حساب',
                       textDirection: TextDirection.rtl,
                       style: TextStyle(
