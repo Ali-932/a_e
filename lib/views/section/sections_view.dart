@@ -1,3 +1,4 @@
+import 'package:a_e/controllers/category_controller.dart';
 import 'package:a_e/views/category/stores/stores_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -12,6 +13,7 @@ class SectionsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final CategoriesController Gategorycontroller = Get.find<CategoriesController>();
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
@@ -51,19 +53,30 @@ class SectionsPage extends StatelessWidget {
               child: Column(
                 children: [
                   Wrap(
-                    children: [
-                      GestureDetector(
+                    children: Gategorycontroller.categories?.map((category) {
+                      return GestureDetector(
                         onTap: () {
-                          controller.goToNestedPage(StoresPage());
+                          // Handle tap here if needed
                         },
-                        child: const BoxItem(name: "متاجر"),
-                      ),
-                      const BoxItem(name: "عيادات"),
-                      const BoxItem(name: "عروض"),
-                      const BoxItem(name: "خدمات منزلية"),
-                      const BoxItem(name: "منظمات"),
-                    ],
+                        child: BoxItem(name: category.type),
+                      );
+                    }).toList() ?? [],
                   ),
+                  // Wrap(
+                  //   children: [
+                  //
+                  //     // GestureDetector(
+                  //     //   onTap: () {
+                  //     //     controller.goToNestedPage(StoresPage());
+                  //     //   },
+                  //     //   child: const BoxItem(name: "متاجر"),
+                  //     // ),
+                  //     // const BoxItem(name: "عيادات"),
+                  //     // const BoxItem(name: "عروض"),
+                  //     // const BoxItem(name: "خدمات منزلية"),
+                  //     // const BoxItem(name: "منظمات"),
+                  //   ],
+                  // ),
                 ],
               ),
             ),

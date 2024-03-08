@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 
 import '../controllers/auth/sign_up_location_controller.dart';
 import '../controllers/auth/user_controller.dart';
+import '../controllers/category_controller.dart';
 import '../controllers/navbar_controllers.dart';
 
 class AppBinding implements Bindings{
@@ -10,5 +11,6 @@ class AppBinding implements Bindings{
     Get.put<NavbarController>(NavbarController(), permanent: true);
     Get.put<SignUpController>(SignUpController(), permanent: true);
     Get.put<SignInController>(SignInController(), permanent: true);
+    Get.put<CategoriesController>(CategoriesController(), permanent: true);
   }
 }
