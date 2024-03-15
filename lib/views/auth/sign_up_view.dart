@@ -18,13 +18,6 @@ class SignupScreen extends StatefulWidget {
 
 class _SignupScreenState extends State<SignupScreen> {
   final SignUpController signupController = Get.find<SignUpController>();
-  final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _password1Controller = TextEditingController();
-  final TextEditingController _password2Controller = TextEditingController();
-  final TextEditingController _fullnameController = TextEditingController();
-  final TextEditingController _genderController = TextEditingController();
-  final TextEditingController _phone_numberController = TextEditingController();
-  final TextEditingController _cityController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
