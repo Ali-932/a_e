@@ -33,7 +33,7 @@ class AnimalTypeRemote {
           return modelList;
         } catch (e) {
           print('Error decoding JSON: $e');
-          sc.value = 500;
+          sc.value = 5000;
           ed.value = 'Internal server error';
           return null;
         }

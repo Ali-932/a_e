@@ -8,6 +8,7 @@ class Server {
   static String signIn = '/api/auth/signin';
   static String signUP = '/api/auth/signup';
   static String getCategories = '/api/home/get_categories';
+  static String getAnimalTypes = '/api/home/get_animal_types';
   static late Options token;
   static late String to;
   static void setToken(String t){
